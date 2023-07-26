@@ -7,6 +7,8 @@ import Signup from '../components/pages/Signup/Signup';
 import Home from '../components/pages/Home/Home';
 import Profile from '../components/pages/Profile/Profile';
 import '../styles/global.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 const App = () => {
   const pathnameArr = ['/', '/login', '/signup', '/profile'];
   const location = useLocation();
