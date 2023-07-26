@@ -1,45 +1,39 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "../components/layout/layout";
 import ScrollToTop from "../components/ScrollToTop";
-import rooter from '../routes';
 import Error from "../components/pages/Error/Error";
-import { useEffect } from "react";
+import Login from '../components/pages/Login/Login';
+import Signup from '../components/pages/Signup/Signup';
+import Home from '../components/pages/Home/Home';
+import Profile from '../components/pages/Profile/Profile';
+import '../styles/global.css';
 const App = () => {
   const pathnameArr = ['/', '/login', '/signup', '/profile'];
   const location = useLocation();
 
-  useEffect(() => {
-    console.log(location.pathname)
-  }, [location.pathname])
+
   return (
     <>
-      {/* <ScrollToTop />
+      <ScrollToTop />
       {
         pathnameArr.includes(location.pathname) ? (
           location.pathname === "/login" || location.pathname === "/signup" || location.pathname === '/error' ? (
             <Routes>
-              {rooter.length > 0 &&
-                rooter.map((el, index) => (
-                  <Route element={el.element} key={index} path={el.path} />
-                ))}
+              <Route element={<Login />} path="/login" />
+              <Route element={<Signup />} path="/signup" />
             </Routes>
           ) : (
 
             <Layout>
               <Routes>
-                {rooter.length > 0 &&
-                  rooter.map((el, index) => (
-                    <Route element={el.element} key={index} path={el.path} />
-                  ))}
+                <Route element={<Home />} path="/" />
+                <Route element={<Profile />} path="/profile" />
               </Routes>
             </Layout>
           )
         ) : (<Error />)
-      } */}
+      }
 
-      <Layout>
-        {'afaljflakjflkajf'}
-      </Layout>
     </>
   );
 };
