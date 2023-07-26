@@ -40,9 +40,11 @@ footer {
         .center {
             margin-top: 68px;
             padding: 0 50px 0 65px;
+
             @media (max-width:450px) {
                 padding: 0 55px;
             }
+
             @media (max-width:992px) {
                 margin-top: 0;
             }
@@ -81,6 +83,7 @@ footer {
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+
                 @media (max-width:450px) {
                     font-size: 17px;
                 }
@@ -103,7 +106,7 @@ footer {
         .right {
             margin-top: 68px;
 
-            @media (max-width:770px) {
+            @media (max-width:992px) {
                 margin-top: 10px;
                 text-align: center;
 
@@ -135,11 +138,12 @@ footer {
                 .up {
                     display: flex;
                     flex-direction: row;
-                    @media (max-width:750px) {
-                       display: flex;
-                       margin-top: 28px;
-                       flex-direction: row;
-                       justify-content: center;
+
+                    @media (max-width:992px) {
+                        display: flex;
+                        margin-top: 28px;
+                        flex-direction: row;
+                        justify-content: center;
                     }
 
                     h2 {
@@ -151,19 +155,20 @@ footer {
                         line-height: normal;
                         margin-left: 22px;
 
-                       
+
                     }
                 }
 
                 .down {
                     display: flex;
                     flex-direction: row;
-                    @media (max-width:750px) {
+
+                    @media (max-width:992px) {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
                         margin-top: 5px;
-                     }
+                    }
 
                     h2 {
                         color: #FFF;
@@ -188,10 +193,8 @@ footer {
         width: 100%;
         height: 2px;
         background: #716E6E;
-        @media (max-width:750px) {
-            
-            
-        }
+
+        @media (max-width:750px) {}
     }
 
     .texting {
