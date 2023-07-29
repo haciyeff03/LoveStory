@@ -1,5 +1,4 @@
 import "./footer.scss";
-import {message} from "./message.svg";
 const Footer = () => {
   return (
     <footer>
@@ -28,7 +27,9 @@ const Footer = () => {
 
               </div>
               <div className="down first">
-              <img src={message} alt="" />
+                <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 11.5C1 16.0563 1.56251 18.3696 2.96997 19.6598C3.67341 20.3046 4.67359 20.7733 6.15565 21.0752C7.64457 21.3786 9.55023 21.5 12 21.5C14.4498 21.5 16.3554 21.3786 17.8443 21.0752C19.3264 20.7733 20.3266 20.3046 21.03 19.6598C22.4375 18.3696 23 16.0563 23 11.5C23 6.94371 22.4375 4.63039 21.03 3.34022C20.3266 2.6954 19.3264 2.2267 17.8443 1.92477C16.3554 1.62145 14.4498 1.5 12 1.5C8.76038 1.5 6.49183 1.71386 4.88769 2.26179C3.35463 2.78545 2.4532 3.60344 1.88302 4.90203C1.25285 6.33723 1 8.41967 1 11.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
                 <h2>Lorem, ipsum.</h2>
               </div>
             </div>

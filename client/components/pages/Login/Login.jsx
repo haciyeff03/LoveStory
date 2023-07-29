@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import './login.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Login = () => {
+
+  const [hidden, setHidden] = useState(true);
+
   return (
     <div className="login_page">
       <div className="login_page_container">
@@ -54,8 +59,14 @@ const Login = () => {
             <input type="email" name='email' required />
 
             <label htmlFor="password">Şifrə</label>
-            <input className='pw_input' type="password" name='password' required />
-
+            <div className="passwords">
+              <input className='pw_input' type={hidden ? 'password' : 'text'} name='password' required />
+              <div onClick={() => setHidden((prev) => !prev)} className="eye_icons">
+                {
+                  hidden ? <FaEyeSlash /> : <FaEye />
+                }
+              </div>
+            </div>
             <Link className='forgot_pw' to='/'>Şifrəni unutdum</Link>
 
             <div className="btn_cont">

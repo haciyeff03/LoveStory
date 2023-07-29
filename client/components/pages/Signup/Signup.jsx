@@ -1,7 +1,12 @@
 import './signup.scss';
-import bgimg from '../../../src/assets/login_bg.jpeg'
+import bgimg from '../../../src/assets/login_bg.jpeg';
 import { Link } from 'react-router-dom';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from 'react';
 const Signup = () => {
+  const [hidden1, setHidden1] = useState(true);
+  const [hidden2, setHidden2] = useState(true);
+
   return (
     <div className="signup_page">
       <div className="signup_page_container">
@@ -78,24 +83,34 @@ const Signup = () => {
             <div className="passwords">
               <div className="psw">
                 <label>Şifrə</label>
-                <input type="password" />
+                <input type={hidden1 ? 'password' : 'text'} />
+                <div onClick={() => setHidden1((prev) => !prev)} className="eye_icons">
+                  {
+                    hidden1 ? <FaEyeSlash /> : <FaEye />
+                  }
+                </div>
               </div>
 
               <div className="psw_again">
                 <label>Şifrə təkrar</label>
-                <input type="password" />
+                <input type={hidden2 ? 'password' : 'text'} />
+                <div onClick={() => setHidden2((prev) => !prev)} className="eye_icons">
+                  {
+                    hidden2 ? <FaEyeSlash /> : <FaEye />
+                  }
+                </div>
               </div>
             </div>
-
             <div className="btn_container">
-              <button>İrəli
+              <Link to='/signup/2'>İrəli
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
-                  <path d="M2 2L14 14L2 26"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2 2L14 14L2 26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </button>
+              </Link>
 
             </div>
+
           </form>
 
           <h6><Link to='/login'>Daxil ol</Link></h6>
