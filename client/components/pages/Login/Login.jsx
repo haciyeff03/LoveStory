@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import './login.scss';
+import bgimg from '../../../src/assets/login_bg.jpeg';
 
 const Login = () => {
   return (
     <div className="login_page">
-      <div className="container">
-        <div className="login_container">
+      <div className="login_page_container">
+        <div className="login_form_container">
           <h2>Daxil ol</h2>
           <div className="bottom_shadow">
             <svg xmlns="http://www.w3.org/2000/svg" width="235" height="2" viewBox="0 0 235 2" fill="none">
@@ -58,21 +59,21 @@ const Login = () => {
             <input type="email" name='email' required />
 
             <label htmlFor="password">Şifrə</label>
-            <input type="password" name='password' required />
+            <input className='pw_input' type="password" name='password' required />
 
-            <Link to='/'>Şifrəni unutdum</Link>
-
-            <h6>
-              <Link to='/signup'>Qeydiyyatdan keç</Link>
-            </h6>
+            <Link className='forgot_pw' to='/'>Şifrəni unutdum</Link>
 
             <div className="btn_cont">
               <button type='submit'>Davam et</button>
             </div>
+            <h6>
+              <Link to='/signup'>Qeydiyyatdan keç</Link>
+            </h6>
           </form>
         </div>
         <div className="bg_image">
-
+          <img src={bgimg} alt="wedding" />
+          <div className="overlay"></div>
         </div>
       </div>
     </div>
