@@ -45,13 +45,8 @@ const Login = () => {
           </div>
 
           <div className="email_option">
-            <svg xmlns="http://www.w3.org/2000/svg" width="133" height="1" viewBox="0 0 133 1" fill="none">
-              <path d="M1 0.5L132 0.5" stroke="#AAA6A3" stroke-linecap="round" />
-            </svg>
             <span>və ya e-mail vasitəsilə</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="133" height="1" viewBox="0 0 133 1" fill="none">
-              <path d="M1 0.5L132 0.5" stroke="#AAA6A3" stroke-linecap="round" />
-            </svg>
+            <div className="linee"></div>
           </div>
 
           <form>
