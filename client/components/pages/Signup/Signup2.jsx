@@ -1,13 +1,34 @@
 import './signup.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSnapshot } from 'valtio';
+import { signupStore } from '../../../store/store';
 const Signup2 = () => {
-
+    const snap = useSnapshot(signupStore);
     const [toggleSelect1, setToggleSelect1] = useState(false);
     const [toggleSelect2, setToggleSelect2] = useState(false);
     const [position, setPosition] = useState('Fotoqraf');
     const [experience, setExperience] = useState('0-6 ay');
+
+    useEffect(() => {
+        signupStore.position = position;
+        signupStore.experience = experience;
+    }, [experience, position])
+
+    useEffect(() => {
+        signupStore.position = position;
+        signupStore.experience = experience;
+    }, [])
+
+    // useEffect(() => {
+    //     console.log(snap)
+    // }, [snap])
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(snap)
+    }
     return (
         <div className="signup_page signup_page_2">
             <div className="signup_page_container">
@@ -62,7 +83,7 @@ const Signup2 = () => {
 
                     {/* REGISTER FORM */}
 
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label>Mövqe</label>
                         <div className="select_option" onClick={() => {
                             setToggleSelect1((prev) => !prev);

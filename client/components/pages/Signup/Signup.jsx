@@ -2,11 +2,18 @@ import './signup.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
 import { Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { signupStore } from '../../../store/store';
+import { useSnapshot } from 'valtio';
+
 const Signup = () => {
   const [hidden1, setHidden1] = useState(true);
   const [hidden2, setHidden2] = useState(true);
+  const snap = useSnapshot(signupStore);
 
+  // useEffect(() => {
+  //   console.log(snap)
+  // }, [snap])
   return (
     <div className="signup_page">
       <div className="signup_page_container">
@@ -65,25 +72,25 @@ const Signup = () => {
             <div className="fullname">
               <div className="name">
                 <label>Ad</label>
-                <input type="text" />
+                <input type="text" onChange={(e) => signupStore.name = e.target.value} value={snap.name} />
               </div>
 
               <div className="surname">
                 <label>Soyad</label>
-                <input type="text" />
+                <input type="text" onChange={(e) => signupStore.surname = e.target.value} value={snap.surname} />
               </div>
             </div>
 
             <label>Email</label>
-            <input type="email" />
+            <input type="email" onChange={(e) => signupStore.email = e.target.value} value={snap.email} />
 
             <label>Mobil nömrə</label>
-            <input type="text" />
+            <input type="text" onChange={(e) => signupStore.tel = e.target.value} value={snap.tel} />
 
             <div className="passwords">
               <div className="psw">
                 <label>Şifrə</label>
-                <input type={hidden1 ? 'password' : 'text'} />
+                <input type={hidden1 ? 'password' : 'text'} onChange={(e) => signupStore.password = e.target.value} value={snap.password} />
                 <div onClick={() => setHidden1((prev) => !prev)} className="eye_icons">
                   {
                     hidden1 ? <FaEyeSlash /> : <FaEye />
@@ -93,7 +100,7 @@ const Signup = () => {
 
               <div className="psw_again">
                 <label>Şifrə təkrar</label>
-                <input type={hidden2 ? 'password' : 'text'} />
+                <input type={hidden2 ? 'password' : 'text'} value={snap.password} />
                 <div onClick={() => setHidden2((prev) => !prev)} className="eye_icons">
                   {
                     hidden2 ? <FaEyeSlash /> : <FaEye />
