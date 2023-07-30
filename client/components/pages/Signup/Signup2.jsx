@@ -1,21 +1,22 @@
 import './signup.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
 import { Link } from 'react-router-dom';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from 'react';
 const Signup2 = () => {
-    const [hidden1, setHidden1] = useState(true);
-    const [hidden2, setHidden2] = useState(true);
 
+    const [toggleSelect1, setToggleSelect1] = useState(false);
+    const [toggleSelect2, setToggleSelect2] = useState(false);
+    const [position, setPosition] = useState('Fotoqraf');
+    const [experience, setExperience] = useState('0-6 ay');
     return (
-        <div className="signup_page">
+        <div className="signup_page signup_page_2">
             <div className="signup_page_container">
-                <div className="bg_image">
+                <div className="bg_image signup2_bgimg">
                     <img src={bgimg} alt="" />
                     <div className="overlay"></div>
                 </div>
 
-                <div className="register_container">
+                <div className="register_container signup_container_2">
                     <h2>Qeydiyyat</h2>
                     <div className="bottom_shadow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="235" height="2" viewBox="0 0 235 2" fill="none">
@@ -62,21 +63,45 @@ const Signup2 = () => {
                     {/* REGISTER FORM */}
 
                     <form>
-                        <label htmlFor="job">Mövqe</label>
-                        <select name="job" defaultValue="Fotoqraf">
-                            <option value="fotoqraf">Fotoqraf</option>
-                            <option value="videoqraf">Videoqraf</option>
-                            <option value="istifadəçi">İstifadəçi</option>
-                        </select>
+                        <label>Mövqe</label>
+                        <div className="select_option" onClick={() => {
+                            setToggleSelect1((prev) => !prev);
+                            setToggleSelect2(false);
+                        }
+                        }>
+                            <h4 className='position'>{position}</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="17" viewBox="0 0 28 17" fill="none">
+                                <path d="M26 2.5L14 14.5L2 2.5" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-                        <label htmlFor="experience">Təcrübə</label>
-                        <select name="experience" defaultValue="Fotoqraf">
-                            <option value="fotoqraf">Fotoqraf</option>
-                            <option value="videoqraf">Videoqraf</option>
-                            <option value="istifadəçi">İstifadəçi</option>
-                        </select>
+                            <div className="options" style={{ display: toggleSelect1 ? 'block' : 'none' }}>
+                                <div className="option" onClick={() => setPosition('Fotoqraf')}>Fotoqraf</div>
+                                <div className="option" onClick={() => setPosition('Videoqraf')}>Videoqraf</div>
+                                <div className="option" onClick={() => setPosition('İstifadəçi')}>İstifadəçi</div>
+                            </div>
+                        </div>
+
+                        <label>Təcrübə</label>
+                        <div className="select_option"
+                            onClick={() => {
+                                setToggleSelect2((prev) => !prev);
+                                setToggleSelect1(false);
+                            }
+                            }>
+                            <h4>{experience}</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="17" viewBox="0 0 28 17" fill="none">
+                                <path d="M26 2.5L14 14.5L2 2.5" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <div className="options" style={{ display: toggleSelect2 ? 'block' : 'none' }}>
+                                <div className="option" onClick={() => setExperience('0-6 ay')}>0-6 ay</div>
+                                <div className="option" onClick={() => setExperience('6ay -1 il')}>6ay -1 il</div>
+                                <div className="option" onClick={() => setExperience('1-3 il')}>1-3il</div>
+                                <div className="option" onClick={() => setExperience('3 ildən çox')}>3 ildən çox</div>
+                            </div>
+                        </div>
                         <div className="btn_container">
-                            <button>Bitir
+                            <button className='form_finish_btn'>Bitir
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
                                     <path d="M2 2L14 14L2 26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -89,8 +114,8 @@ const Signup2 = () => {
 
                     <h6><Link to='/login'>Daxil ol</Link></h6>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 

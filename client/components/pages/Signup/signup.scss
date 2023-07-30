@@ -69,6 +69,21 @@
             }
         }
 
+        .signup2_bgimg {
+            top: 46%;
+
+            @media (max-width: 768px) {
+                left: 0;
+                top: 0;
+                transform: none;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+        }
+
+        
+
         .register_container {
             border-radius: 30px;
             border: 3px solid #000;
@@ -184,8 +199,7 @@
                     }
                 }
 
-                input,
-                select {
+                input {
                     width: 100%;
                     border-radius: 50px;
                     border: 1px solid #222;
@@ -206,39 +220,82 @@
                     }
                 }
 
-                select {
-                    color: #928E8E;
-                    font-family: Nunito;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    cursor: pointer;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
 
-                    &:checked {
-                        background-color: transparent;
-                    }
-                }
-
-                option {
+                .select_option {
                     width: 100%;
-                    background-color: #F3EFE0;
-                    color: #928E8E;
-                    font-family: Nunito;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    border-radius: 30px;
-                    padding: 30px 0 !important;
+                    border-radius: 50px;
+                    border: 1px solid #222;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 32px;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    margin-bottom: 25px;
+                    position: relative;
 
-                    &:checked,
+                    @media (max-width: 768px) {
+                        padding: 5px 15px;
+                        margin-bottom: 15px;
+                    }
 
-                    &:hover {
-                        background-color: transparent;
+                    h4 {
+                        color: #928E8E;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin: 0;
+
+                        @media (max-width: 768px) {
+                            font-size: 12px;
+                        }
+                    }
+
+                
+
+                    svg {
+                        @media (max-width: 768px) {
+                            width: 8.959px;
+                            height: 15.678px;
+                        }
+                    }
+
+                    .options {
+                        position: absolute;
+                        top: calc(100% + 6px);
+                        left: -1px;
+                        border-radius: 25px;
+                        border: 1px solid #000;
+                        background: #F3EFE0;
+                        width: 101%;
+                        z-index: 1000;
+                        overflow: hidden;
+
+                        @media (max-width: 768px) {
+                            border-radius: 10px;
+                        }
+
+                        .option {
+                            color: #928E8E;
+                            font-family: Nunito;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            padding: 9px 25px;
+                            border-bottom: 1px solid #B9B9B9;
+
+                            &:hover {
+                                color: black;
+                            }
+
+                            @media (max-width: 768px) {
+                                padding: 5px 15px;
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
 
@@ -349,6 +406,10 @@
                         }
                     }
 
+                    .form_finish_btn {
+                        margin-top: 50px;
+                    }
+
                     a {
                         text-decoration: none;
                         border-radius: 50px;
@@ -420,6 +481,10 @@
                     }
                 }
             }
+        }
+
+        .signup_container_2 {
+            padding: 30px 60px;
         }
     }
 }
