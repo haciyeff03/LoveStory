@@ -5,6 +5,11 @@
     padding: 25px 0 40px 0;
     background-color: #F1F0ED;
 
+    .home_container {
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .filter_options {
         display: flex;
         gap: 5px;
@@ -32,6 +37,30 @@
         display: flex;
         gap: 35px;
         justify-content: center;
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .tablet_card_wrapper {
+        display: none;
+        gap: 35px;
+        justify-content: center;
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .mobile_card_wrapper {
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        @media (max-width: 768px) {
+            display: flex;
+        }
     }
 
     .card_container {
