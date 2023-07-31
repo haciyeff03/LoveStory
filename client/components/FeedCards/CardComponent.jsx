@@ -1,5 +1,17 @@
+import { useState } from 'react';
 import './card.scss';
 const CardComponent = ({ imgpath }) => {
+
+    const [isLiked, setIsLiked] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleAnimation = () => {
+        setIsAnimating(true);
+        setIsLiked((prev) => !prev);
+        setTimeout(() => {
+            setIsAnimating(false)
+        }, 200);
+    }
     return (
         <div className='card_component'>
             <div className="card_top">
@@ -33,8 +45,8 @@ const CardComponent = ({ imgpath }) => {
 
             <div className="card_bottom">
                 <div className="likes">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20" fill="none">
-                        <path d="M8.35 1C10.0404 1 11.5823 1.84142 12.75 2.8C13.9177 1.84142 15.4596 1 17.15 1C20.7951 1 23.75 3.71049 23.75 7.05386C23.75 13.795 16.0774 17.721 13.5481 18.8321C13.0386 19.056 12.4614 19.056 11.9519 18.8321C9.42259 17.721 1.75 13.7948 1.75 7.0537C1.75 3.71033 4.70492 1 8.35 1Z" stroke="#222222" stroke-width="2" />
+                    <svg style={isLiked ? { transform: isAnimating ? 'scale(1.2)' : 'scale(1)' } : {transform: isAnimating? 'scale(0.9)' : 'scale(1)'}} xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20" fill="none" onClick={handleAnimation}>
+                        <path d="M8.35 1C10.0404 1 11.5823 1.84142 12.75 2.8C13.9177 1.84142 15.4596 1 17.15 1C20.7951 1 23.75 3.71049 23.75 7.05386C23.75 13.795 16.0774 17.721 13.5481 18.8321C13.0386 19.056 12.4614 19.056 11.9519 18.8321C9.42259 17.721 1.75 13.7948 1.75 7.0537C1.75 3.71033 4.70492 1 8.35 1Z" stroke={isLiked ? '#FF2626' : '#222222'} stroke-width="2" />
                     </svg>
                     <span>121212</span>
                 </div>

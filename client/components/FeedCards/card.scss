@@ -102,9 +102,11 @@
             align-items: center;
             gap: 3px;
             margin-bottom: 10px;
+            user-select: none;
 
             svg {
                 cursor: pointer;
+                transition: .2s;
             }
 
             span {
