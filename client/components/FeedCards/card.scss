@@ -84,6 +84,7 @@
         border: 1px solid #434242;
         overflow: hidden;
         margin-top: 11px;
+        max-height: 370px;
 
         img {
             width: 100%;
@@ -118,6 +119,7 @@
 
         .description {
             margin-bottom: 2px;
+
             p {
                 color: #434242;
                 font-family: Nunito;

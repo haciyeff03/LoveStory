@@ -1,5 +1,5 @@
 import './card.scss';
-const CardComponent = () => {
+const CardComponent = ({ imgpath }) => {
     return (
         <div className='card_component'>
             <div className="card_top">
@@ -28,7 +28,7 @@ const CardComponent = () => {
             </div>
 
             <div className="card_image">
-                <img src="https://s3-alpha-sig.figma.com/img/3dd6/8b18/18938ba8323b12fe2d31341b45c5dd67?Expires=1691366400&Signature=qIS7WMgeLgE8WqhwBTPNChgPpRwFCsenQi7TaIfI8rx0dRuS~a5nz77m8P1WNFwxp6bfwjy9snHpe~ggriWzjycMSNehLD3f4EdbZgTnqRwYCZpzf67UKzmHYUER6vIo~65Vv2QM3cs-uTBRuqFP26WvCw9CEkrbST1QHoQW~f6elnkeIOLoI8V73hh6Bt01h5xaXicdGmGD3Vtj8JgxZG11QsSgRADMNBVv3OwG8NbMYxysiTJ0JE0Qwy-G8it1IAwogL2kbt2LneczqgWe07KRXG-2rUE6GEILKcVCqd9xkPcSNvnNA3EJkgYhnny0VVOnmFHeYAqTnOGUg-7mBQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="wedding" />
+                <img src={imgpath} alt="wedding" />
             </div>
 
             <div className="card_bottom">

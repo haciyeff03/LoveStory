@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+
 .home_page {
-    padding: 40px 0;
+    padding: 25px 0 40px 0;
+    background-color: #F1F0ED;
+
+    .filter_options {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+
+        .option {
+            padding: 18px 32px;
+            gap: 10px;
+            border-radius: 50px;
+            border: 1px solid #222;
+            color: #222;
+            font-family: Nunito;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+    .card_wrapper {
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+    }
+
+    .card_container {
+        max-width: 390px;
+
+        margin-bottom: 35px;
+    }
+
+    .homepage_heading {
+        color: #000;
+        font-family: Nunito;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 49px;
+    }
 }
