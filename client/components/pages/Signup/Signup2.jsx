@@ -133,7 +133,7 @@ const Signup2 = () => {
 
                     </form>
 
-                    <h6><Link to='/login'>Daxil ol</Link></h6>
+                    <h6 className='login_link'><Link to='/login'>Daxil ol</Link></h6>
                 </div>
             </div >
         </div >

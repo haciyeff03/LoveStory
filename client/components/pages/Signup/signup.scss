@@ -199,13 +199,22 @@
                     }
                 }
 
+                .validation_error {
+                    margin-bottom: 24px;
+                    color: red;
+                    font-size: 12px;
+                    @media (max-width: 768px) {
+                        margin-bottom: 12px;
+                    }
+                }
+
                 input {
                     width: 100%;
                     border-radius: 50px;
                     border: 1px solid #222;
                     background-color: transparent;
                     padding: 10px 45px 10px 20px;
-                    margin-bottom: 24px;
+                    // margin-bottom: 24px;
                     color: #000;
                     font-family: Nunito;
                     font-size: 18px;
@@ -216,7 +225,7 @@
                     @media (max-width: 768px) {
                         padding: 5px 15px;
                         font-size: 12px;
-                        margin-bottom: 15px;
+                        // margin-bottom: 15px;
                     }
                 }
 
@@ -333,11 +342,11 @@
                         .eye_icons {
                             position: absolute;
                             right: 12px;
-                            top: 51%;
+                            top: 52px;
                             transform: translateY(-50%);
 
                             @media (max-width: 768px) {
-                                top: 53%;
+                                top: 36px;
                             }
 
                             svg {
@@ -458,7 +467,7 @@
                 }
             }
 
-            h6 {
+            .login_link {
                 text-align: center;
                 margin-top: 12px;
 

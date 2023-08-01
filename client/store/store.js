@@ -6,6 +6,7 @@ export const signupStore = proxy({
     email: '',
     tel: '',
     password: '',
+    pwagain: '',
     position: '',
     experience: ''
 })

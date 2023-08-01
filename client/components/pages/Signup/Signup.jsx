@@ -5,15 +5,55 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { signupStore } from '../../../store/store';
 import { useSnapshot } from 'valtio';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [hidden1, setHidden1] = useState(true);
   const [hidden2, setHidden2] = useState(true);
   const snap = useSnapshot(signupStore);
+  const navigate = useNavigate();
+  const [validation, setValidation] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    tel: '',
+    password: '',
+    pwagain: ''
+  });
 
-  // useEffect(() => {
-  //   console.log(snap)
-  // }, [snap])
+  const [inputs, setInputs] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    tel: '',
+    password: '',
+    pwagain: ''
+  });
+
+  const [error, setError] = useState(false);
+  const [click, setClick] = useState(false);
+
+
+  useEffect(() => {
+    if (inputs.name.length === 0 || inputs.name === '') {
+      setValidation({ ...validation, name: 'Bos qala bilmez' });
+      setError(true)
+    } else {
+      setValidation({ ...validation, name: '' });
+      setError(false)
+    }
+  }, [inputs])
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setClick(true)
+
+    if (!error) {
+      navigate('/signup/2')
+    }
+  }
+
+
   return (
     <div className="signup_page">
       <div className="signup_page_container">
@@ -72,20 +112,27 @@ const Signup = () => {
             <div className="fullname">
               <div className="name">
                 <label>Ad</label>
-                <input type="text" onChange={(e) => signupStore.name = e.target.value} value={snap.name} />
+                <input type="text" onChange={(e) => {
+                  signupStore.name = e.target.value;
+                  setInputs({ ...inputs, name: e.target.value })
+                }} value={snap.name} />
+                <h6 className='validation_error'>{click && validation.name}</h6>
               </div>
 
               <div className="surname">
                 <label>Soyad</label>
                 <input type="text" onChange={(e) => signupStore.surname = e.target.value} value={snap.surname} />
+                <h6 className='validation_error'>{validation.surname}</h6>
               </div>
             </div>
 
             <label>Email</label>
             <input type="email" onChange={(e) => signupStore.email = e.target.value} value={snap.email} />
+            <h6 className='validation_error'></h6>
 
             <label>Mobil nömrə</label>
             <input type="text" onChange={(e) => signupStore.tel = e.target.value} value={snap.tel} />
+            <h6 className='validation_error'></h6>
 
             <div className="passwords">
               <div className="psw">
@@ -96,31 +143,34 @@ const Signup = () => {
                     hidden1 ? <FaEyeSlash /> : <FaEye />
                   }
                 </div>
+                <h6 className='validation_error'>Error</h6>
               </div>
 
               <div className="psw_again">
                 <label>Şifrə təkrar</label>
-                <input type={hidden2 ? 'password' : 'text'} value={snap.password} />
+                <input type={hidden2 ? 'password' : 'text'} onChange={(e) => signupStore.pwagain = e.target.value} value={snap.pwagain} />
                 <div onClick={() => setHidden2((prev) => !prev)} className="eye_icons">
                   {
                     hidden2 ? <FaEyeSlash /> : <FaEye />
                   }
                 </div>
+                <h6 className='validation_error'>Error</h6>
               </div>
             </div>
-            <div className="btn_container">
-              <Link to='/signup/2'>İrəli
+
+            <div className="btn_container"  onClick={handleSubmit}>
+              <button>İrəli
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
                   <path d="M2 2L14 14L2 26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </Link>
+              </button>
 
             </div>
 
           </form>
 
-          <h6><Link to='/login'>Daxil ol</Link></h6>
+          <h6 className='login_link'><Link to='/login'>Daxil ol</Link></h6>
         </div>
       </div>
     </div>
