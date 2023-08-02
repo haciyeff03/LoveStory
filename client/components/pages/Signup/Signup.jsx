@@ -63,7 +63,14 @@ const Signup = () => {
     if (snap.password.trim().length === 0) {
       errmsg5 = 'Boslugu doldurun';
       err = true;
-    } else {
+    }
+
+    else if (snap.password.length < 6) {
+      errmsg5 = 'Şifrə ən az 6 xarakterdən ibarət olmalıdır';
+      err = true;
+    }
+
+    else {
       errmsg5 = '';
     }
     if (snap.pwagain.trim().length === 0) {
@@ -83,7 +90,7 @@ const Signup = () => {
     setValidation({ ...validation, name: errmsg1, surname: errmsg2, email: errmsg3, tel: errmsg4, password: errmsg5, pwagain: errmsg6 })
   }, [snap])
 
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setClick(true)

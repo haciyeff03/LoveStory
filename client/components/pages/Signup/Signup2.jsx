@@ -21,9 +21,6 @@ const Signup2 = () => {
         signupStore.experience = experience;
     }, [])
 
-    // useEffect(() => {
-    //     console.log(snap)
-    // }, [snap])
 
     const handleSubmit = (e) => {
         e.preventDefault();

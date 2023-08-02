@@ -24,13 +24,13 @@
         }
 
         .bg_image {
-            position: absolute;
+            position: fixed;
             width: 70%;
             height: 560px;
             border-radius: 20px;
             overflow: hidden;
             left: 0;
-            top: 43%;
+            top: 46%;
             transform: translate(75px, -50%);
             z-index: 9;
 
@@ -494,6 +494,9 @@
 
         .signup_container_2 {
             padding: 30px 60px;
+            @media (max-width: 550px) {
+                padding: 20px 25px;
+            }
         }
     }
 }
