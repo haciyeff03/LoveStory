@@ -21,29 +21,69 @@ const Signup = () => {
     pwagain: ''
   });
 
-  const [inputs, setInputs] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    tel: '',
-    password: '',
-    pwagain: ''
-  });
 
   const [error, setError] = useState(false);
   const [click, setClick] = useState(false);
 
 
   useEffect(() => {
-    if (inputs.name.length === 0 || inputs.name === '') {
-      setValidation({ ...validation, name: 'Bos qala bilmez' });
-      setError(true)
+    let errmsg1 = '';
+    let errmsg2 = '';
+    let errmsg3 = '';
+    let errmsg4 = '';
+    let errmsg5 = '';
+    let errmsg6 = '';
+    let err = false;
+    if (snap.name.trim().length === 0) {
+      errmsg1 = 'Boslugu doldurun';
+      err = true;
     } else {
-      setValidation({ ...validation, name: '' });
-      setError(false)
+      errmsg1 = '';
     }
-  }, [inputs])
 
+    if (snap.surname.trim().length === 0) {
+      errmsg2 = 'Boslugu doldurun';
+      err = true;
+    } else {
+      errmsg2 = '';
+    }
+
+    if (snap.email.trim().length === 0) {
+      errmsg3 = 'Boslugu doldurun';
+      err = true;
+    } else {
+      errmsg3 = '';
+    }
+    if (snap.tel.trim().length === 0) {
+      errmsg4 = 'Boslugu doldurun';
+      err = true;
+    } else {
+      errmsg4 = '';
+    }
+    if (snap.password.trim().length === 0) {
+      errmsg5 = 'Boslugu doldurun';
+      err = true;
+    } else {
+      errmsg5 = '';
+    }
+    if (snap.pwagain.trim().length === 0) {
+      errmsg6 = 'Boslugu doldurun';
+      err = true;
+    }
+    else if (snap.pwagain !== snap.password) {
+      errmsg6 = 'Şifrələr eyni olmalıdır';
+      err = true
+    }
+
+    else {
+      errmsg6 = '';
+    }
+
+    setError(err);
+    setValidation({ ...validation, name: errmsg1, surname: errmsg2, email: errmsg3, tel: errmsg4, password: errmsg5, pwagain: errmsg6 })
+  }, [snap])
+
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     setClick(true)
@@ -112,27 +152,24 @@ const Signup = () => {
             <div className="fullname">
               <div className="name">
                 <label>Ad</label>
-                <input type="text" onChange={(e) => {
-                  signupStore.name = e.target.value;
-                  setInputs({ ...inputs, name: e.target.value })
-                }} value={snap.name} />
+                <input type="text" onChange={(e) => { signupStore.name = e.target.value }} value={snap.name} />
                 <h6 className='validation_error'>{click && validation.name}</h6>
               </div>
 
               <div className="surname">
                 <label>Soyad</label>
-                <input type="text" onChange={(e) => signupStore.surname = e.target.value} value={snap.surname} />
-                <h6 className='validation_error'>{validation.surname}</h6>
+                <input type="text" onChange={(e) => { signupStore.surname = e.target.value }} value={snap.surname} />
+                <h6 className='validation_error'>{click && validation.surname}</h6>
               </div>
             </div>
 
             <label>Email</label>
             <input type="email" onChange={(e) => signupStore.email = e.target.value} value={snap.email} />
-            <h6 className='validation_error'></h6>
+            <h6 className='validation_error'>{click && validation.email}</h6>
 
             <label>Mobil nömrə</label>
             <input type="text" onChange={(e) => signupStore.tel = e.target.value} value={snap.tel} />
-            <h6 className='validation_error'></h6>
+            <h6 className='validation_error'>{click && validation.tel}</h6>
 
             <div className="passwords">
               <div className="psw">
@@ -143,7 +180,7 @@ const Signup = () => {
                     hidden1 ? <FaEyeSlash /> : <FaEye />
                   }
                 </div>
-                <h6 className='validation_error'>Error</h6>
+                <h6 className='validation_error'>{click && validation.password}</h6>
               </div>
 
               <div className="psw_again">
@@ -154,11 +191,11 @@ const Signup = () => {
                     hidden2 ? <FaEyeSlash /> : <FaEye />
                   }
                 </div>
-                <h6 className='validation_error'>Error</h6>
+                <h6 className='validation_error'>{click && validation.pwagain}</h6>
               </div>
             </div>
 
-            <div className="btn_container"  onClick={handleSubmit}>
+            <div className="btn_container" onClick={handleSubmit}>
               <button>İrəli
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
