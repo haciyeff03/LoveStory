@@ -10,3 +10,9 @@ export const signupStore = proxy({
     position: '',
     experience: ''
 })
+
+export const loginStore = proxy({
+     email: '',
+    password: '',
+   
+})

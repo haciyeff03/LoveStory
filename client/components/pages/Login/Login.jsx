@@ -2,11 +2,64 @@ import { Link } from 'react-router-dom';
 import './login.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useState } from 'react';
-
+import { useState , useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { loginStore } from '../../../store/store';
+import { useSnapshot } from 'valtio';
 const Login = () => {
 
   const [hidden, setHidden] = useState(true);
+  const [validation, setValidation] = useState({
+    email: '',
+    password: '',
+  });
+
+  const snap = useSnapshot(loginStore);
+  const navigate = useNavigate();
+  const [error, setError] = useState(false);
+  const [click, setClick] = useState(false);
+  
+  useEffect(() => {
+    let errmsg3 = '';
+    let errmsg5 = '';
+    let err = false;
+
+    if (snap.email.trim().length === 0) {
+      errmsg3 = 'Boslugu doldurun';
+      err = true;
+    } else {
+      errmsg3 = '';
+    }
+    
+    if (snap.password.trim().length === 0) {
+      errmsg5 = 'Boslugu doldurun';
+      err = true;
+    }
+
+    else if (snap.password.length < 6) {
+      errmsg5 = 'Şifrə ən az 6 xarakterdən ibarət olmalıdır';
+      err = true;
+    }
+
+    else {
+      errmsg5 = '';
+    }
+   
+
+    setError(err);
+    setValidation({ ...validation,  email: errmsg3,password: errmsg5 })
+  }, [snap])
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setClick(true)
+
+    if (!error) {
+      navigate('/')
+    }
+  }
+
 
   return (
     <div className="login_page">
@@ -54,19 +107,21 @@ const Login = () => {
             <div className="linee"></div>
           </div>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <input type="email" name='email' required />
-
+            <input type="email"  onChange={(e) => loginStore.email = e.target.value} value={snap.email} />
+            <h6 className='validation_error'>{click && validation.email}</h6>
             <label htmlFor="password">Şifrə</label>
             <div className="passwords">
-              <input className='pw_input' type={hidden ? 'password' : 'text'} name='password' required />
+              <input className='pw_input' type={hidden ? 'password' : 'text'} name='password'  onChange={(e) => loginStore.password = e.target.value} value={snap.password}  />
               <div onClick={() => setHidden((prev) => !prev)} className="eye_icons">
                 {
                   hidden ? <FaEyeSlash /> : <FaEye />
                 }
               </div>
+              
             </div>
+            <h6 className='validation_error'>{click && validation.password}</h6>
             <Link className='forgot_pw' to='/'>Şifrəni unutdum</Link>
 
             <div className="btn_cont">
