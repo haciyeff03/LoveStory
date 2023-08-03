@@ -1,0 +1,125 @@
+.profile_page {
+    background-color: #F1F0ED;
+    min-height: 100vh;
+
+    h1 {
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #000;
+            font-family: Nunito;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .profile_page_container {
+        .profile_header {
+            .profile_image {
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .profile_content {
+                border-right: 1px solid #AFABA7;
+                padding-right: 30px;
+
+                .profile_name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 2px;
+
+                    h3 {
+                        color: #000;
+                        font-family: Nunito;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin: 0;
+                    }
+                }
+
+                .position,
+                .experience {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    span {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+
+                .description {
+                    color: #7A7A7A;
+                    font-family: Nunito;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin: 10px 0 0 0;
+                }
+            }
+
+
+            .profile_contact {
+
+
+                .profile_rate {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-bottom: 10px;
+
+                    span {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+
+                .gmail_tel {
+                    h5 {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0 0 10px 0;
+                    }
+                }
+
+                .web_link {
+                    a {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}

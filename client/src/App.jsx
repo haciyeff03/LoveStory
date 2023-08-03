@@ -9,8 +9,9 @@ import Signup2 from '../components/pages/Signup/Signup2';
 import Home from '../components/pages/Home/Home';
 import Profile from '../components/pages/Profile/Profile';
 import '../styles/global.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
+
 const App = () => {
   const pathnameArr = ['/', '/login', '/signup', '/profile', '/loading', '/signup/2'];
   const location = useLocation();
@@ -21,19 +22,20 @@ const App = () => {
       <ScrollToTop />
       {
         pathnameArr.includes(location.pathname) ? (
-          location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/signup/2" || location.pathname === '/error' || location.pathname === '/loading' ? (
+          location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/signup/2" || location.pathname === '/error' || location.pathname === '/loading' || location.pathname === '/profile' ? (
             <Routes>
               <Route element={<Login />} path="/login" />
               <Route element={<Signup />} path="/signup" />
               <Route element={<Loading />} path="/loading" />
               <Route element={<Signup2 />} path="/signup/2" />
+              <Route element={<Profile />} path="/profile" />
             </Routes>
           ) : (
 
             <Layout>
               <Routes>
                 <Route element={<Home />} path="/" />
-                <Route element={<Profile />} path="/profile" />
+               
               </Routes>
             </Layout>
           )
