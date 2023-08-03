@@ -186,11 +186,11 @@
                 .eye_icons {
                     position: absolute;
                     right: 15px;
-                    top: 38%;
+                    top: 21px;
                     transform: translateY(-50%);
 
                     @media (max-width: 768px) {
-                        top: 40%;
+                        top: 12px;
                     }
 
                     svg {
@@ -200,7 +200,6 @@
 
                         @media (max-width: 768px) {
                             font-size: 12px;
-
                         }
                     }
                 }
