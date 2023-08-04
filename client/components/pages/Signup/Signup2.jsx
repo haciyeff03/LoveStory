@@ -1,6 +1,6 @@
 import './signup.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSnapshot } from 'valtio';
 import { signupStore } from '../../../store/store';
@@ -10,6 +10,7 @@ const Signup2 = () => {
     const [toggleSelect2, setToggleSelect2] = useState(false);
     const [position, setPosition] = useState('Fotoqraf');
     const [experience, setExperience] = useState('0-6 ay');
+    const navigate = useNavigate()
 
     useEffect(() => {
         signupStore.position = position;
@@ -19,6 +20,10 @@ const Signup2 = () => {
     useEffect(() => {
         signupStore.position = position;
         signupStore.experience = experience;
+
+        if(snap.email.trim().length === 0) {
+            navigate('/signup')
+        }
     }, [])
 
 
