@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './login.scss';
 import bgimg from '../../../src/assets/login_bg.jpeg';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginStore } from '../../../store/store';
 import { useSnapshot } from 'valtio';
@@ -18,36 +18,43 @@ const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
   const [click, setClick] = useState(false);
-  
+  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
   useEffect(() => {
     let errmsg3 = '';
     let errmsg5 = '';
     let err = false;
 
     if (snap.email.trim().length === 0) {
-      errmsg3 = 'Boslugu doldurun';
+      errmsg3 = 'Boşluğu doldurun';
       err = true;
-    } else {
+    } 
+    
+    else if(!snap.email.match(emailRegex)) {
+      errmsg3 = 'Düzgün email daxil edin';
+      err = true;
+    }
+    else {
       errmsg3 = '';
     }
-    
+
     if (snap.password.trim().length === 0) {
-      errmsg5 = 'Boslugu doldurun';
+      errmsg5 = 'Boşluğu doldurun';
       err = true;
     }
 
     else if (snap.password.length < 6) {
-      errmsg5 = 'Şifrə ən az 6 xarakterdən ibarət olmalıdır';
+      errmsg5 = 'Şifrə ən az 6 simvoldan ibarət olmalıdır';
       err = true;
     }
 
     else {
       errmsg5 = '';
     }
-   
+
 
     setError(err);
-    setValidation({ ...validation,  email: errmsg3,password: errmsg5 })
+    setValidation({ ...validation, email: errmsg3, password: errmsg5 })
   }, [snap])
 
 
@@ -109,17 +116,17 @@ const Login = () => {
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <input type="email"  onChange={(e) => loginStore.email = e.target.value} value={snap.email} />
+            <input type="text" onChange={(e) => loginStore.email = e.target.value} value={snap.email} />
             <h6 className='validation_error'>{click && validation.email}</h6>
             <label htmlFor="password">Şifrə</label>
             <div className="passwords">
-              <input className='pw_input' type={hidden ? 'password' : 'text'} name='password'  onChange={(e) => loginStore.password = e.target.value} value={snap.password}  />
+              <input className='pw_input' type={hidden ? 'password' : 'text'} name='password' onChange={(e) => loginStore.password = e.target.value} value={snap.password} />
               <div onClick={() => setHidden((prev) => !prev)} className="eye_icons">
                 {
                   hidden ? <FaEyeSlash /> : <FaEye />
                 }
               </div>
-              
+
             </div>
             <h6 className='validation_error'>{click && validation.password}</h6>
             <Link className='forgot_pw' to='/'>Şifrəni unutdum</Link>

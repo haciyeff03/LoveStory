@@ -31,7 +31,7 @@
             overflow: hidden;
             left: 0;
             top: 46%;
-            transform: translate(75px, -50%);
+            transform: translate(80px, -50%);
             z-index: 9;
 
             @media (max-width: 1100px) {
@@ -82,7 +82,7 @@
             }
         }
 
-        
+
 
         .register_container {
             border-radius: 30px;
@@ -186,6 +186,42 @@
             form {
                 user-select: none;
 
+                .tel_number {
+                    position: relative;
+
+                    .tel_input {
+                        padding-left: 70px;
+                        @media (max-width: 768px) {
+                            padding-left: 48px;
+                        }
+                    }
+
+                    .number_prefix {
+                        position: absolute;
+                        left: 20px;
+                        top: 43px;
+                        z-index: 100;
+
+                        @media (max-width: 768px) {
+                            left: 15px;
+                            top: 24px;
+                        }
+
+                        span {
+                            color: #000;
+                            font-family: Nunito;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+
+                            @media (max-width: 768px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
                 label {
                     color: #222;
                     font-family: Nunito;
@@ -203,8 +239,10 @@
                     margin: 3px 0 24px 0;
                     color: red;
                     font-size: 12px;
+
                     @media (max-width: 768px) {
                         margin-bottom: 12px;
+                        font-size: 9px;
                     }
                 }
 
@@ -214,7 +252,6 @@
                     border: 1px solid #222;
                     background-color: transparent;
                     padding: 10px 45px 10px 20px;
-                    // margin-bottom: 24px;
                     color: #000;
                     font-family: Nunito;
                     font-size: 18px;
@@ -225,7 +262,6 @@
                     @media (max-width: 768px) {
                         padding: 5px 15px;
                         font-size: 12px;
-                        // margin-bottom: 15px;
                     }
                 }
 
@@ -262,7 +298,7 @@
                         }
                     }
 
-                
+
 
                     svg {
                         @media (max-width: 768px) {
@@ -494,6 +530,7 @@
 
         .signup_container_2 {
             padding: 30px 60px;
+
             @media (max-width: 550px) {
                 padding: 20px 25px;
             }

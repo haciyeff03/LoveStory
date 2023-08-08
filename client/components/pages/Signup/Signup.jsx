@@ -24,8 +24,8 @@ const Signup = () => {
 
   const [error, setError] = useState(false);
   const [click, setClick] = useState(false);
-
-
+  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const numRegex = /^\d+$/;
   useEffect(() => {
     let errmsg1 = '';
     let errmsg2 = '';
@@ -35,53 +35,64 @@ const Signup = () => {
     let errmsg6 = '';
     let err = false;
     if (snap.name.trim().length === 0) {
-      errmsg1 = 'Boslugu doldurun';
+      errmsg1 = 'Boşluğu doldurun';
       err = true;
     } else {
       errmsg1 = '';
     }
 
     if (snap.surname.trim().length === 0) {
-      errmsg2 = 'Boslugu doldurun';
+      errmsg2 = 'Boşluğu doldurun';
       err = true;
     } else {
       errmsg2 = '';
     }
 
     if (snap.email.trim().length === 0) {
-      errmsg3 = 'Boslugu doldurun';
+      errmsg3 = 'Boşluğu doldurun';
       err = true;
-    } else {
+    }
+    else if (!snap.email.match(emailRegex)) {
+      errmsg3 = 'Düzgün email daxil edin';
+      err = true;
+    }
+    else {
       errmsg3 = '';
     }
+
     if (snap.tel.trim().length === 0) {
-      errmsg4 = 'Boslugu doldurun';
+      errmsg4 = 'Boşluğu doldurun';
       err = true;
-    } else {
+    }
+    else if (!snap.tel.match(numRegex)) {
+      errmsg4 = 'Düzgün telefon nömrəsi daxil edin';
+      err = true;
+    }
+    else {
       errmsg4 = '';
     }
+
+
     if (snap.password.trim().length === 0) {
-      errmsg5 = 'Boslugu doldurun';
+      errmsg5 = 'Boşluğu doldurun';
       err = true;
     }
-
     else if (snap.password.length < 6) {
-      errmsg5 = 'Şifrə ən az 6 xarakterdən ibarət olmalıdır';
+      errmsg5 = 'Şifrə ən az 6 simvoldan ibarət olmalıdır';
       err = true;
     }
-
     else {
       errmsg5 = '';
     }
+
     if (snap.pwagain.trim().length === 0) {
-      errmsg6 = 'Boslugu doldurun';
+      errmsg6 = 'Boşluğu doldurun';
       err = true;
     }
     else if (snap.pwagain !== snap.password) {
       errmsg6 = 'Şifrələr eyni olmalıdır';
       err = true
     }
-
     else {
       errmsg6 = '';
     }
@@ -171,13 +182,17 @@ const Signup = () => {
             </div>
 
             <label>Email</label>
-            <input type="email" onChange={(e) => signupStore.email = e.target.value} value={snap.email} />
+            <input type="email" onChange={(e) => signupStore.email = e.target.value} placeholder='example@gmail.com' value={snap.email} />
             <h6 className='validation_error'>{click && validation.email}</h6>
 
-            <label>Mobil nömrə</label>
-            <input type="text" onChange={(e) => signupStore.tel = e.target.value} value={snap.tel} />
-            <h6 className='validation_error'>{click && validation.tel}</h6>
-
+            <div className="tel_number">
+              <label>Mobil nömrə</label>
+              <input type="text" className='tel_input' placeholder='0501234567' onChange={(e) => signupStore.tel = e.target.value} value={snap.tel} />
+              <h6 className='validation_error'>{click && validation.tel}</h6>
+              <div className="number_prefix">
+                <span>+994</span>
+              </div>
+            </div>
             <div className="passwords">
               <div className="psw">
                 <label>Şifrə</label>
