@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+
+.mobile_modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 90%;
+   
+    .card_component {
+        border-radius: 30px;
+        border: 2px solid #000;
+        background-color: #F3EFE0;
+        padding: 18px 20px 25px 20px;
+        width: 100%;
+        
+        .card_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card_author {
+                display: flex;
+                gap: 8px;
+
+
+                .author_photo {
+                    width: 37.5px;
+                    height: 37.5px;
+                    overflow: hidden;
+                    border-radius: 15px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .author_content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    .author_name {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        span {
+                            color: #222;
+                            font-family: Nunito;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }
+
+                    .location {
+                        p {
+                            color: #434242;
+                            font-family: Nunito;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .card_price {
+                p {
+                    color: #000;
+                    font-family: Nunito;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0;
+                }
+            }
+        }
+
+        .card_image {
+            width: 100%;
+            border-radius: 25px;
+            border: 1px solid #434242;
+            overflow: hidden;
+            margin-top: 11px;
+            height: 300px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        .card_bottom {
+            margin-top: 9px;
+
+            .likes {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+                margin-bottom: 10px;
+                user-select: none;
+
+                svg {
+                    cursor: pointer;
+                    transition: .15s;
+                }
+
+                span {
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+
+            .description {
+                margin-bottom: 2px;
+
+                p {
+                    color: #434242;
+                    font-family: Nunito;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0;
+                }
+            }
+
+            .tags {
+                span {
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+.open_mobile_modal {
+    @media (max-width: 768px) {
+        display: block !important;
+    }
+}
