@@ -17,11 +17,6 @@ const SharePost = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({
-            images: snap.images,
-            description: snap.description,
-            tag: snap.tag
-        })
     }
 
     return (
@@ -52,12 +47,12 @@ const SharePost = () => {
                                 <div className="description">
                                     <h3>Şəkilin təsviri</h3>
                                     <h6>(min.100 söz daxil edin)</h6>
-                                    <textarea name="description" cols="30" rows="5" placeholder='asimazizov5@gmail.com' onChange={(e) => sharePostStore.description = e.target.value}></textarea>
+                                    <textarea name="description" cols="30" rows="5" placeholder='asimazizov5@gmail.com' onChange={(e) => { sharePostStore.description = e.target.value; console.log(e.target.value) }}></textarea>
                                 </div>
 
                                 <div className="post_tag">
                                     <h3>Tag et</h3>
-                                    <input type="text" onChange={(e) => sharePostStore.tag = e.target.value} />
+                                    <input type="text" onChange={(e) => { sharePostStore.tag = e.target.value; console.log(e.target.value) }} />
                                 </div>
 
                                 <div className="share_btn">
