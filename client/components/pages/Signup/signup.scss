@@ -24,13 +24,13 @@
         }
 
         .bg_image {
-            position: fixed;
+            position: absolute;
             width: 70%;
             height: 560px;
             border-radius: 20px;
             overflow: hidden;
             left: 0;
-            top: 46%;
+            top: 40%;
             transform: translate(80px, -50%);
             z-index: 9;
 

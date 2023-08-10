@@ -1,0 +1,131 @@
+.sharepost_page {
+    min-height: 100vh;
+    background: #F1F0ED;
+    padding: 20px 0;
+
+    .sharepost_left {
+        .photo_container {
+            width: 95%;
+            aspect-ratio: 1/1;
+            border-radius: 30px;
+            border: 2px solid #222;
+            background: #F3EFE0;
+            margin-bottom: 30px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .photo_wrapper {
+            display: flex;
+            gap: 23px;
+            flex-wrap: wrap;
+
+            .photo {
+                width: 25%;
+                aspect-ratio: 1/1;
+                border-radius: 10px;
+                border: 1px solid #000;
+                overflow: hidden;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .sharepost_right {
+        form {
+            h3 {
+                color: #222;
+                font-family: Nunito;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.64px;
+                margin-bottom: 8px;
+            }
+
+            h5 {
+                color: #434242;
+                font-family: Nunito;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.32px;
+            }
+
+            textarea {
+                border-radius: 20px;
+                border: 1px solid #222;
+                margin-bottom: 30px;
+                background-color: transparent;
+                padding: 10px 25px;
+                color: #222;
+                font-family: Nunito;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                width: 100%;
+
+                &::placeholder {
+                    color: #928E8E;
+                }
+            }
+
+            input {
+                border-radius: 50px;
+                border: 1px solid #222;
+                width: 100%;
+                background-color: transparent;
+                padding: 10px 25px;
+                color: #222;
+                font-family: Nunito;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                &::placeholder {
+                    color: #928E8E;
+                }
+            }
+
+            .share_btn {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    padding: 10px 32px;
+                    border-radius: 50px;
+                    background: #222;
+                    color: #F3EFE0;
+                    font-family: Nunito;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 0.64px;
+                    border: 1px solid #222;
+                    margin-top: 20%;
+                    transition: .1s;
+                    &:hover {
+                        color: #222;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+        }
+    }
+}

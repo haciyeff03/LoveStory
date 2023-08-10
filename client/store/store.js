@@ -16,3 +16,9 @@ export const loginStore = proxy({
     password: '',
    
 })
+
+export const sharePostStore = proxy({
+    images: [],
+    description: '',
+    tag: ''
+})
