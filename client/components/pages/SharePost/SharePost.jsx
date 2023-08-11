@@ -47,7 +47,7 @@ const SharePost = () => {
                                 <div className="description">
                                     <h3>Şəkilin təsviri</h3>
                                     <h6>(min.100 söz daxil edin)</h6>
-                                    <textarea name="description" cols="30" rows="5" placeholder='asimazizov5@gmail.com' onChange={(e) => { sharePostStore.description = e.target.value; console.log(e.target.value) }}></textarea>
+                                    <textarea name="description" cols="30" rows="6" placeholder='asimazizov5@gmail.com' onChange={(e) => { sharePostStore.description = e.target.value; console.log(e.target.value) }}></textarea>
                                 </div>
 
                                 <div className="post_tag">
