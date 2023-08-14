@@ -1,0 +1,423 @@
+::placeholder {
+    color: #928E8E;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+    position: relative; 
+}
+
+.edit-container {    
+    padding: 0 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F1F0ED !important;
+    font-family: 'Nunito';
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+}
+
+.edit-logo {
+    margin: 19px 0 124px 0;
+}
+
+.edit-form {
+    margin: auto;
+    max-width: 830px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 150px;
+}
+
+.edit-inputs {
+    max-width: 460px;
+}
+
+.edit-photo {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+} 
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-photo > div {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d980;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+.edit-photo > div > p {
+    color: #000;
+    font: 600 24px 'Nunito';
+    margin: 15px 0;
+}
+
+.upload-photo {
+    display: none;
+}
+
+.crop-modal {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.ReactModalPortal {
+    position: absolute;
+    z-index: 10000;
+}
+
+.reactEasyCrop_Container {
+    width: 100%;
+    height: 90%;
+}
+
+.crop-manage {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.crop-button {
+    border: none;
+    background-color: #F3EFE0;
+    border: 1px solid #222;
+    color: #222;
+    padding: 5px 10px;
+    margin-right: 7px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.crop-button:hover {
+    background-color: #222;
+    color: #F3EFE0;
+    border: 1px solid #F3EFE0;
+}
+
+.zoom-range {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-divs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-100, .name-surname > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-surname > div {
+    width: 49%;
+}
+
+.div-100 {
+    width: 100%;
+}
+
+.name-surname {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-2 {
+    color: #928E8E;   
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.submit-button > button {
+    width: 214px;
+    padding: 6px 32px;
+    border-radius: 50px;
+    border: 1px solid #222;
+    background: #222;
+    color: #F3EFE0;
+    text-align: center;
+    font: 700 32px 'Nunito';
+    letter-spacing: 0.64px;
+    transition: 0.3s;
+}
+
+.submit-button > button:hover {
+    color: #222;
+    background-color: #F3EFE0;
+}
+
+.edit-form-input {
+    width: 100%;
+    padding: 10px 32px;
+    border-radius: 50px;
+    border: 1px solid #222;
+    background-color: transparent;
+    color: #928E8E;
+    font: 600 24px 'Nunito';
+}
+
+.edit-label {
+    color: #222;
+    font: 500 24px 'Nunito';
+    margin-bottom: 5px;
+}
+
+.edit-inputs > div {
+    margin-bottom: 10px;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+}
+
+.dropdown-header {
+    width: 100%;
+    padding: 10px 32px !important;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #222;
+    background-color: transparent;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    font: 600 24px 'Nunito' !important;
+    color: #928E8E !important;
+}
+
+.dropdown-options {
+    margin-top: 10px;
+    background-color: #F1F0ED;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    border: 1px solid #222;
+    overflow: hidden;
+}
+
+.dropdown-options > div:not(:last-child) {
+    border-bottom: 1px solid #B9B9B9;
+}
+
+.dropdown-option {
+    padding: 10px 32px;
+    cursor: pointer;
+    color: #928E8E;
+    font: 600 24px 'Nunito';
+    transition: 0.2s;
+}
+
+.dropdown-option:hover {
+    color: #222;
+}
+ 
+.select-arrow {
+    width: 24px;
+}
+
+.num-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.num-input {
+    padding-left: 115px;
+}
+
+.num-prefix {
+    position: absolute;
+    left: 30px;
+    color: #928E8E;
+    font: 600 24px 'Nunito';
+}       
+
+@media screen and (max-width: 896px) {
+    .edit-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edit-logo {
+        margin: 19px 0 30px 0;
+    }
+
+    .submit-button > button {
+        width: 100%;
+    } 
+
+    .name-surname {
+        flex-direction: column;
+        margin-bottom: 0 !important;
+    }
+
+    .name-surname > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}   
+
+@media screen and (max-width: 592px) {
+    .edit-form {
+        width: 75%;
+        gap: 40px;
+    }
+
+    .edit-photo {
+        width: 225px;
+        height: 225px;
+    } 
+
+    .edit-photo > div > img {
+        width: 115px;
+    }
+
+    .edit-photo > div > p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .edit-label {
+        font-size: 12px;
+    }
+
+    .edit-inputs {
+        width: 100%;
+    }
+
+    .submit-button > button {
+        padding: 7.5px 24px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    } 
+
+    .edit-form-input {
+        width: 100%;
+        padding: 7.5px 24px;
+        border-radius: 50px;
+        border: 1px solid #222;
+        background-color: transparent;
+        color: #928E8E;
+        font-size: 12px;
+    }
+
+    .num-input {
+        padding-left: 65px;
+    }
+
+    .num-prefix {
+        position: absolute;
+        left: 25px;
+        color: #928E8E;
+        font-size: 12px;
+    }
+
+    .dropdown-header {
+        padding: 7.5px 24px !important;
+        font-size: 12px !important;
+    }
+
+    .dropdown-options {
+        border-radius: 15px;
+    }
+
+    .dropdown-option {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .select-arrow {
+        width: 16px;
+    }
+
+    .crop-modal {
+        width: 85%;
+        height: 70%;
+    }
+} 
+
+@media screen and (max-width: 492px) {
+    .edit-form {
+        width: 95%;
+    }
+
+    .edit-photo {
+        width: 190px;
+        height: 190px;
+    } 
+
+    .edit-photo > div > img {
+        width: 105px;
+    }
+
+    .edit-photo > div > p {
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    .reactEasyCrop_Container {
+        height: 93%;
+    }
+
+    .crop-manage {
+        height: 7%;
+    }
+
+    .crop-button {
+        color: #222;
+        padding: 2px 6px;
+        font-size: 14px;
+        border-radius: 6px;
+        margin-right: 4px;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
