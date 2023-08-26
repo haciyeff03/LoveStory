@@ -14,7 +14,7 @@ const Profile = () => {
               <div className="row align-items-center g-5">
                 <div className="col-lg-3">
                   <div className="profile_image">
-                    <img src="https://s3-alpha-sig.figma.com/img/9a7d/9d5a/9a61183622389d4f6831f1629bf67eab?Expires=1691971200&Signature=nLdYz0csDUberF30qjATaHjvk5wV97B0eGQ7UhWNgHzej~hxeeZXsQ8jZpxbi0u6wIrUPSUmz8YnfNRxopHnylpsq33wSkdN-NrARsETF7zyIzno-k759IxDKhc9DcESBMnyr4Bv3oaIifKoX7VczdYpsUzG9Fm9vqJ4pJEWHzl9MvaxqI8oFIjsqWqFd8vpKHmfs~r2U8zwFkAIeXjB8y089Dd1-ezii1Twh611Ti5s-uCOXiToVx7AFfJ~C2cgd-R4c9350sHVKWwBRJemJ9y09rRS0-ALri7VXvbLN4iRplfrqsD1podIPehkrzkYsqjmNJjQGixuE~ZmpVSoPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                    <img src="/src/assets/pp.jpeg" alt="" />
                   </div>
                 </div>
 
@@ -74,12 +74,13 @@ const Profile = () => {
               </div>
             </div>
           </div>
+
           <div className="profile_header_mobile">
             <div className="container">
               <div className="row head">
                 <div className="col-lg-4 col-md-4 col-sm-4 col-4 first">
                   <div className="profile_image">
-                    <img src="https://s3-alpha-sig.figma.com/img/9a7d/9d5a/9a61183622389d4f6831f1629bf67eab?Expires=1692576000&Signature=dm9QY3-YOzAkaPLxxI9e8SQz020TFg0zNAgkTr1Vgy~FicuBBWuQCgM3sTHJBTKG2d5U5dpRB6yskCaL5L8jSL4gNhqqxFEPOTf6f1CrpRZKjzpqTd5Ginr6DQZfzYPI3sHfspGu~5REjZJTwzgeNbjYmtSiDvEqq1IaKyyE75QgwJdeO2v1J-D6Nz8vcoqdh2VyVWWHK71D1Ffq3Vp1vXhnutQqsnG-1~3q6NG0OqVqq4M3kCzsvX1cvgslDFMiuCDF2Uk4XOJvB3kafHv6ZbAoCYyhOh6wINuDmeJfui7Rc31dLxuy35By1mByPyqxHR4Q7vs6A6~fCVwwdJP7QQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                    <img src="/src/assets/pp.jpeg" alt="" />
                   </div>
                   <div className="profile_rate">
                     <svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32" fill="none">
@@ -141,56 +142,56 @@ const Profile = () => {
 
           </div>
         </div>
+
+
         <div className="profil_page_card">
           <div className="container ">
             <div className="row ">
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6  second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 second" onClick={() => setOpenModal(true)}>
                 <div className="img1">
-                  <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                  <img src="/src/assets/card.png" alt="" />
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -198,14 +199,14 @@ const Profile = () => {
 
       <div className={openModal ? 'card_modal  open_modal' : 'card_modal'}>
         <div className="modal_left">
-          <img src="https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+          <img src="/src/assets/card.png" alt="" />
         </div>
 
         <div className="modal_right">
           <div className="right_top">
             <div className="modal_profile">
               <div className="mp_photo">
-                <img src="https://s3-alpha-sig.figma.com/img/9e72/9cfc/2fb3451f2790627112ebba6732cb7a49?Expires=1692576000&Signature=pLPVO0UqviTAonwFwXbQEHQ4v~3PyVFL8kpR2KFdUVdO9CAwrT6AIXVevOar2JGwDTY3rLcugY6phT30Op1~N-cNjXWaeksHKgEPC~uGPA9lAUifvTpbgd4BDZwLcRRL9rA2djR3AkrKSQ2CrYlVZVERSD4AOLGSecAXX9aAROxlCVGLqQOUiQs8eE2e2k3W2ixC5AsyG4e6nILrSp-1JRfckgk9MvfxquRfC96~oRX-zzSjBd6FJjSvCRKt0BEcJAbvZzzawBh9JTaFQnj4XZZ5e7srjCL4dU2qv8yfA1GkVoGw8VnW2xdhiEhxFvT-h0zmgmYe929kwL~wS-DUjg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                <img src="/src/assets/pp.jpeg" alt="" />
               </div>
               <div className="mp_info">
                 <div className="mp_name">
@@ -252,7 +253,7 @@ const Profile = () => {
       <div className="modal_overlay" onClick={() => setOpenModal(false)} style={{ display: openModal ? 'block' : 'none' }}></div>
 
       <div className={openModal ? 'mobile_modal  open_mobile_modal' : 'mobile_modal'}>
-        <ModalcardComponent imgpath='https://s3-alpha-sig.figma.com/img/31bf/4373/ca6bb2e4595a8c302786c7c014512147?Expires=1692576000&Signature=WIbIx7FPAbj2c4DN1xz6azhe252kgbTHGkmfP9-umzljbejBS6KByG3ZsLiUPNZcupfd8R~9P47hep2WzVOjMyIOpiYCU2vfW00S51DOBAnXyACfTcnxkNch1reX1OyjjBXk6H8SodVSmwui5WWjs2u~d~lYZA2erz2~GOVbdmtp544~jZ6sXmF9AEsA9qxK-~LGg0uZT78HIkA6aoG3UcDXxmJYOgLs7DT3WceJps0UhR~--jCtXzQD9V8AbmzMmOjoidZN3hng1N0CrfusE2NWmmqHrZuWeFyT4W~IkpKk0DaA9qdzB-C0H-TssTyrSv~Q~x-eFkGvoW~o6rgmZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
+        <ModalcardComponent imgpath='/src/assets/card.png' />
       </div>
     </>
   )
