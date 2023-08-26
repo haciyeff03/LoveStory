@@ -28,9 +28,9 @@ const Login = () => {
     if (snap.email.trim().length === 0) {
       errmsg3 = 'Boşluğu doldurun';
       err = true;
-    } 
-    
-    else if(!snap.email.match(emailRegex)) {
+    }
+
+    else if (!snap.email.match(emailRegex)) {
       errmsg3 = 'Düzgün email daxil edin';
       err = true;
     }
@@ -129,7 +129,7 @@ const Login = () => {
 
             </div>
             <h6 className='validation_error'>{click && validation.password}</h6>
-            <Link className='forgot_pw' to='/'>Şifrəni unutdum</Link>
+            <Link className='forgot_pw' to='/forget-password'>Şifrəni unutdum</Link>
 
             <div className="btn_cont">
               <button type='submit'>Davam et</button>
