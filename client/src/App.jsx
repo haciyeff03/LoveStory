@@ -8,15 +8,16 @@ import Signup from '../components/pages/Signup/Signup';
 import Signup2 from '../components/pages/Signup/Signup2';
 import Home from '../components/pages/Home/Home';
 import Profile from '../components/pages/Profile/Profile';
-import EditProfile from "../components/pages/EditProfile/EditProfile";  
+import EditProfile from "../components/pages/EditProfile/EditProfile";
 import '../styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 import UploadImage from "../components/pages/UploadImage/UploadImage";
 import SharePost from "../components/pages/SharePost/SharePost";
+import ForgetPassword from "../components/pages/ForgetPassword/forgetpw";
 
 const App = () => {
-  const pathnameArr = ['/', '/login', '/signup', '/profile', '/profile/edit', '/loading', '/signup/2', '/upload-image', '/share-post'];
+  const pathnameArr = ['/', '/login', '/signup', '/profile', '/profile/edit', '/loading', '/signup/2', '/upload-image', '/share-post', '/forget-password'];
   const location = useLocation();
 
 
@@ -33,7 +34,8 @@ const App = () => {
             location.pathname === '/profile' ||
             location.pathname === '/upload-image' ||
             location.pathname === '/profile/edit' ||
-            location.pathname === '/share-post' ? (
+            location.pathname === '/share-post' ||
+            location.pathname === '/forget-password' ? (
             <Routes>
               <Route element={<Login />} path="/login" />
               <Route element={<Signup />} path="/signup" />
@@ -43,6 +45,7 @@ const App = () => {
               <Route element={<EditProfile />} path="/profile/edit" />
               <Route element={<UploadImage />} path="/upload-image" />
               <Route element={<SharePost />} path="/share-post" />
+              <Route element={<ForgetPassword />} path="/forget-password" />
             </Routes>
           ) : (
 

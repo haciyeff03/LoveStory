@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+.forgetpw_page {
+    background: #F1F0ED;
+    min-height: 100vh;
+
+    .login_page_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 75px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+
+        @media (max-width: 768px) {
+            padding: 20px 0;
+            align-items: center;
+        }
+    }
+
+    .forgetpw_form_container {
+        border-radius: 30px;
+        border: 3px solid #000;
+        background: #F3EFE0;
+        box-shadow: -10px 20px 41px 0px rgba(0, 0, 0, 0.25);
+        width: 63%;
+        padding: 120px 80px;
+        // min-height: 95vh;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:1200px) {
+            padding: 100px 30px;
+        }
+
+        @media (max-width:991px) {
+            padding: 90px 50px;
+            width: 70%;
+        }
+
+        @media (max-width: 768px) {
+            position: relative;
+            z-index: 10;
+            width: 65%;
+            padding: 100px 36px;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 600px) {
+            width: 75%;
+        }
+
+        @media (max-width: 500px) {
+            width: 80%;
+        }
+
+        @media (max-width: 400px) {
+            width: 90%;
+        }
+        @media (max-width: 375px) {
+            padding: 80px 30px;
+        }
+
+        h2 {
+            color: #222;
+            text-align: center;
+            font-family: Nunito;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 20px;
+
+            @media (max-width: 991px) {
+                font-size: 36px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+
+        }
+
+        .bottom_shadow {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 23px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .forgetpw_description {
+            color: #222;
+            font-family: Nunito;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin: 28px 0 10px 0;
+            text-align: center;
+
+            @media (max-width: 991px) {
+                font-size: 17px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                margin: 15px 0 10px 0;
+            }
+
+
+        }
+
+
+
+
+        form {
+            user-select: none;
+
+            .validation_error {
+                text-align: start;
+
+                color: red;
+                font-size: 12px;
+                margin-bottom: 10px;
+                margin-top: 2px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            input {
+                width: 100%;
+                border-radius: 50px;
+                border: 1px solid #222;
+                background-color: transparent;
+                padding: 10px 20px;
+                color: #000;
+                font-family: Nunito;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                @media (max-width: 768px) {
+                    padding: 7px 15px;
+                    font-size: 12px;
+                }
+            }
+
+
+            .btn_cont {
+                display: flex;
+                justify-content: center;
+                margin-top: 70px;
+
+                @media (max-width: 768px) {
+                    margin-top: 40px;
+                }
+
+                button {
+                    border-radius: 50px;
+                    border: 1px solid #222;
+                    background: #222;
+                    color: #F3EFE0;
+                    text-align: center;
+                    font-family: Nunito;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.56px;
+                    padding: 10px 32px;
+                    transition: .1s ease-in-out;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: #000;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        width: 60%;
+                    }
+                }
+            }
+
+            h6 {
+                text-align: center;
+                margin-top: 16px;
+
+                a {
+                    color: #222;
+                    text-align: center;
+                    font-family: Nunito;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bg_image {
+        position: absolute;
+        width: 70%;
+        height: 560px;
+        border-radius: 20px;
+        overflow: hidden;
+        right: 0;
+        top: 45%;
+        transform: translate(-75px, -50%);
+        z-index: 9;
+
+        @media (max-width: 768px) {
+            left: 0;
+            top: 0;
+            transform: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: #434242;
+            mix-blend-mode: lighten;
+
+            @media (max-width: 768px) {
+                border-radius: 0;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
