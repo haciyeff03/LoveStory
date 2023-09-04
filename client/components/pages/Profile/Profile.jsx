@@ -118,8 +118,8 @@ const Profile = () => {
                     </div>
 
                     <div className="description">
-<p>                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst.</p>
-</p>                    </div>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst.</p>
+                   </div>
                   </div>
                 </div>
               </div>
