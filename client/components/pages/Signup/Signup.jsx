@@ -124,7 +124,7 @@ const Signup = () => {
           <h2>Qeydiyyat</h2>
           <div className="bottom_shadow">
             <svg xmlns="http://www.w3.org/2000/svg" width="235" height="2" viewBox="0 0 235 2" fill="none">
-              <path d="M1 1H233.175" stroke="url(#paint0_linear_290_6152)" stroke-width="2" stroke-linecap="round" />
+              <path d="M1 1H233.175" stroke="url(#paint0_linear_290_6152)" strokeWidth="2" strokeLinecap="round" />
               <defs>
                 <linearGradient id="paint0_linear_290_6152" x1="-12.9615" y1="1.50328" x2="233.175" y2="1.50285" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#F3EFE0" />
@@ -221,7 +221,7 @@ const Signup = () => {
               <button>İrəli
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
-                  <path d="M2 2L14 14L2 26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2 2L14 14L2 26" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
 
