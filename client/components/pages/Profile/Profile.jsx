@@ -43,7 +43,7 @@ const Profile = () => {
                     </div>
 
                     <div className="description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst. Sed id justo et quam scelerisque lobortis. Duis commodo ante et lacus bibendum, vel imperdiet quam gravida. </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst. Sed id justo et quam scelerisque lobortis.</p>
                     </div>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ const Profile = () => {
           <div className="profile_header_mobile">
             <div className="container">
               <div className="row head">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-4 first">
+                <div className="col-lg-4 col-md-4 col-sm-5 col-5 first">
                   <div className="profile_image">
                     <img src="/src/assets/pp.jpeg" alt="" />
                   </div>
@@ -93,7 +93,7 @@ const Profile = () => {
                     <span>5.0</span>
                   </div>
                 </div>
-                <div className="col-lg-8 col-md-8 col-sm-8 col-8 ">
+                <div className="col-lg-8 col-md-8 col-sm-7 col-7 ">
                   <div className="profile_content">
                     <div className="profile_name">
                       <h3>Lorem Ipsum</h3>
@@ -118,8 +118,8 @@ const Profile = () => {
                     </div>
 
                     <div className="description">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst. Sed id justo et quam scelerisque lobortis. Duis commodo ante et lacus bibendum, vel imperdiet quam gravida. </p>
-                    </div>
+<p>                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis. In hac habitasse platea dictumst.</p>
+</p>                    </div>
                   </div>
                 </div>
               </div>
