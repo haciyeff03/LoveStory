@@ -94,7 +94,7 @@
                     align-items: center;
                     gap: 5px;
                     margin-bottom: 10px;
-
+                    
                     span {
                         color: #7A7A7A;
                         font-family: Nunito;
@@ -114,6 +114,13 @@
                         font-weight: 500;
                         line-height: normal;
                         margin: 0 0 10px 0;
+                        @media (max-width:1080px) {
+                            font-size: 22px;               
+                                 }
+                                 @media (max-width:1045px) {
+                                    font-size: 20px;               
+                                         }
+
                     }
                 }
 
@@ -140,12 +147,21 @@
 
             .container {
                 .head {
-                    .first {
-                        gap: 20px;
-                        display: flex;
-                        align-items: flex-end;
-                        flex-direction: column;
+                    margin-bottom: 20px;
+                    @media (max-width:450px) {
+                        margin-bottom: 1px;
 
+                    }
+                   
+                    .first {
+                        gap: 10px;
+                        justify-content: center;
+                        display: flex;
+                        align-items:center ;
+                        flex-direction: column;
+                     
+                        
+                       
                         @media (max-width:520px) {
                             gap: 10px;
 
@@ -155,12 +171,14 @@
                             gap: 5px;
 
                         }
+                       
 
                         .profile_image {
                             @media (max-width:768px) {
                                 aspect-ratio: 1/1;
 
                             }
+                           
 
                             img {
                                 width: 200px;
@@ -173,6 +191,8 @@
                                     height: 100%;
 
                                 }
+                               
+                              
 
                             }
                         }
@@ -180,6 +200,7 @@
                         .profile_rate {
                             display: flex;
                             align-items: center;
+                            justify-content: flex-start;
                             gap: 5px;
                             margin-bottom: 10px;
 
@@ -379,7 +400,7 @@
 
                     @media (max-width:768px) {
                         flex-direction: column;
-                        gap: 0px;
+                        gap: 1px;
                     }
 
                     .gmail,
@@ -400,6 +421,10 @@
                                 font-size: 19px;
 
                             }
+                            @media (max-width:450px) {
+                                font-size: 16px;
+
+                            }
                         }
                     }
 
@@ -418,6 +443,10 @@
                                 font-size: 19px;
 
                             }
+                            @media (max-width:450px) {
+                                font-size: 16px;
+
+                            }
                         }
                     }
                 }
@@ -429,7 +458,14 @@
 
     .profil_page_card {
         margin-top: 85px;
-
+        @media (max-width:550px) {
+            margin-top: 50px;
+            
+        }
+        @media (max-width:430px) {
+            margin-top: 40px;
+            
+        }
         .container {
             .row {
                 padding: 0 40px;
