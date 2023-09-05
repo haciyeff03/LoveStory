@@ -1,0 +1,739 @@
+.profile_page {
+    background-color: #F1F0ED;
+    min-height: 100vh;
+
+    h1 {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-family: Nunito;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .profile_page_container {
+        .profile_header {
+            @media (max-width:1024px) {
+                display: none;
+
+            }
+
+            .profile_image {
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .profile_content {
+                border-right: 1px solid #AFABA7;
+                padding-right: 30px;
+
+                .profile_name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 2px;
+
+                    h3 {
+                        color: #000;
+                        font-family: Nunito;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin: 0;
+                    }
+                }
+
+                .position,
+                .experience {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    span {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+
+                .description {
+                    color: #7A7A7A;
+                    font-family: Nunito;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin: 10px 0 0 0;
+
+
+                }
+            }
+
+
+            .profile_contact {
+                .edit {
+                    margin-bottom: 20px;
+
+                    a {
+                        padding: 7px 32px;
+                        text-decoration: none;
+                        border-radius: 50px;
+                        border: 1px solid #FFF;
+                        background: #222;
+                        color: white;
+                        text-align: center;
+                        font-family: "Nunito";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+
+                    }
+                }
+
+                .profile_rate {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-bottom: 10px;
+
+                    span {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+
+                .gmail_tel {
+                    h5 {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0 0 10px 0;
+
+                        @media (max-width:1080px) {
+                            font-size: 22px;
+                        }
+
+                        @media (max-width:1045px) {
+                            font-size: 20px;
+                        }
+
+                    }
+                }
+
+                .web_link {
+                    a {
+                        color: #7A7A7A;
+                        font-family: Nunito;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+
+        .profile_header_mobile {
+            display: none;
+
+            @media (max-width:1024px) {
+                display: block;
+
+            }
+
+            .container {
+                .head {
+                    margin-bottom: 20px;
+
+                    @media (max-width:450px) {
+                        margin-bottom: 1px;
+
+                    }
+
+                    .first {
+                        gap: 10px;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+
+
+
+                        @media (max-width:520px) {
+                            gap: 10px;
+
+                        }
+
+                        @media (max-width:408px) {
+                            gap: 5px;
+
+                        }
+
+
+                        .profile_image {
+                            @media (max-width:768px) {
+                                aspect-ratio: 1/1;
+
+                            }
+
+
+                            img {
+                                width: 200px;
+                                height: 200px;
+                                object-fit: cover;
+                                border-radius: 50%;
+
+                                @media (max-width:768px) {
+                                    width: 100%;
+                                    height: 100%;
+
+                                }
+
+
+
+                            }
+                        }
+
+                        .profile_rate {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 5px;
+                            margin-bottom: 10px;
+
+                            svg {
+                                width: 100.176px;
+
+                                @media (max-width:520px) {
+                                    width: 88px;
+
+                                }
+
+                                @media (max-width:429px) {
+                                    width: 75px;
+
+                                }
+
+                                @media (max-width:368px) {
+                                    width: 68px;
+
+                                }
+
+                                @media (max-width:341px) {
+                                    width: 58px;
+
+                                }
+                            }
+
+                            span {
+                                color: #7A7A7A;
+                                font-family: Nunito;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+
+                                @media (max-width:668px) {
+                                    font-size: 15px;
+
+                                }
+
+                                @media (max-width:408px) {
+                                    font-size: 13px;
+
+                                }
+
+                                @media (max-width:341px) {
+                                    font-size: 12px;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    .profile_content {
+
+                        .top {
+                            display: flex;
+                            flex-direction: row;
+                            padding: 0 60px 0 0;
+                            justify-content: space-between;
+                            gap: 0;
+
+                            @media (max-width:768px) {
+                                padding: 0;
+                                flex-direction: column;
+                                margin-bottom: 13px;
+                            }
+
+                            @media (max-width:450px) {
+                                padding: 0;
+                                flex-direction: column;
+                                margin-bottom: 10px;
+
+                            }
+
+                            .profile_name {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                margin-bottom: 2px;
+
+                                @media (max-width:618px) {
+                                    gap: 7px;
+                                }
+
+                                @media (max-width:438px) {
+                                    gap: 4px;
+                                    margin-bottom: 0px;
+                                }
+
+                                svg {
+                                    @media (max-width:768px) {
+                                        width: 25px;
+                                    }
+
+                                    @media (max-width:618px) {
+                                        width: 21px;
+                                    }
+                                }
+
+                                h3 {
+                                    color: #000;
+                                    font-family: Nunito;
+                                    font-size: 32px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                    margin: 0;
+
+                                    @media (max-width:768px) {
+                                        font-size: 25px;
+
+                                    }
+
+                                    @media (max-width:450px) {
+                                        font-size: 20px;
+
+                                    }
+                                }
+                            }
+
+                            .edit {
+                                margin-top: 10px;
+
+                                @media (max-width:700px) {
+                                    margin-top: 3px;
+                                }
+
+                                a {
+                                    padding: 7px 22px;
+                                    text-decoration: none;
+                                    border-radius: 50px;
+                                    border: 1px solid #FFF;
+                                    background: #222;
+                                    color: white;
+                                    text-align: center;
+                                    font-family: "Nunito";
+                                    font-size: 17px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    
+                                    @media (max-width:530px) {
+                                        font-size: 15px;
+                                        padding: 9px 27px;
+                                    }
+                                    @media (max-width:470px) {
+                                        font-size: 13px;
+                                        padding: 8px 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .position,
+                        .experience {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            @media (max-width:768px) {
+                                gap: 3px;
+
+                            }
+
+                            span {
+                                color: #7A7A7A;
+                                font-family: Nunito;
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+
+                                @media (max-width:768px) {
+                                    font-size: 19px;
+
+                                }
+
+                                @media (max-width:450px) {
+                                    font-size: 16px;
+
+                                }
+                            }
+
+                            svg {
+                                @media (max-width:768px) {
+                                    width: 23px;
+                                    height: 20px;
+
+                                }
+
+                                @media (max-width:768px) {
+                                    width: 21px;
+                                    height: 18px;
+
+                                }
+                            }
+
+                            .photo {
+                                @media (max-width:768px) {
+                                    width: 23px;
+                                    height: 24px;
+
+                                }
+                            }
+                        }
+
+                        .description {
+                            color: #7A7A7A;
+                            font-family: Nunito;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            margin: 10px 0 0 0;
+
+                            @media (max-width:768px) {
+                                font-size: 17px;
+
+                            }
+
+                            @media (max-width:578px) {
+                                font-size: 15px;
+
+                            }
+
+                            @media (max-width:429px) {
+                                font-size: 13px;
+
+                            }
+                        }
+                    }
+                }
+
+                .text1 {
+
+
+                    display: flex;
+                    justify-content: center;
+                    gap: 75px;
+
+                    @media (max-width:991px) {
+                        gap: 30px;
+
+
+                    }
+
+                    @media (max-width:768px) {
+                        flex-direction: column;
+                        gap: 1px;
+                    }
+
+                    .gmail,
+                    .tel {
+                        display: flex;
+                        flex-direction: row;
+
+                        h5 {
+                            color: #7A7A7A;
+                            font-family: Nunito;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            margin: 0 0 10px 0;
+
+                            @media (max-width:558px) {
+                                font-size: 19px;
+
+                            }
+
+                            @media (max-width:450px) {
+                                font-size: 16px;
+
+                            }
+                        }
+                    }
+
+
+
+                    .web_link {
+                        a {
+                            color: #7A7A7A;
+                            font-family: Nunito;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+
+                            @media (max-width:558px) {
+                                font-size: 19px;
+
+                            }
+
+                            @media (max-width:450px) {
+                                font-size: 16px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .profil_page_card {
+        margin-top: 85px;
+
+        @media (max-width:550px) {
+            margin-top: 50px;
+
+        }
+
+        @media (max-width:430px) {
+            margin-top: 40px;
+
+        }
+
+        .container {
+            .row {
+                padding: 0 40px;
+
+                @media (max-width: 440px) {
+                    padding: 0 15px;
+                }
+
+                .second {
+                    margin-bottom: 28px;
+
+                    .img1 {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 241px;
+                            border-radius: 25px;
+                            border: 1px solid #434242;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    background: #F3EFE0;
+    width: 700px;
+    display: none;
+    justify-content: space-between;
+    height: 500px;
+    z-index: 1000;
+
+    .modal_left {
+        width: 61%;
+        border-radius: 25px;
+        border: 1px solid #434242;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .modal_right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        .right_top {
+            .modal_profile {
+                display: flex;
+                align-items: flex-end;
+                gap: 9px;
+                margin-bottom: 20px;
+
+                .mp_photo {
+                    width: 37.5px;
+                    height: 37.5px;
+                    border-radius: 15px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .mp_info {
+                    .mp_name {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+
+                        span {
+                            color: #222;
+                            font-family: Nunito;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 0;
+                        }
+                    }
+
+                    .mp_location {
+                        color: #434242;
+                        font-family: Nunito;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+
+            .price {
+                color: #000;
+                font-family: Nunito;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+
+            .description {
+                p {
+                    color: #434242;
+                    font-family: Nunito;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0;
+                }
+            }
+
+            .tag {
+                span {
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .right_bottom {
+            .likes {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                span {
+                    margin: 0;
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 14.59px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+}
+
+.modal_overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #22222295;
+}
+
+.open_modal {
+    @media (min-width: 768px) {
+        display: flex !important;
+    }
+}
