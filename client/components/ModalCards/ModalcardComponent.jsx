@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './modalcard.scss';
-const ModalcardComponent = ({ imgpath }) => {
+const ModalcardComponent = ({ content }) => {
 
     const [isLiked, setIsLiked] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
@@ -40,7 +40,7 @@ const ModalcardComponent = ({ imgpath }) => {
             </div>
 
             <div className="card_image">
-                <img src={imgpath} alt="wedding" />
+                <img src={content.images && content.images[0]} alt="wedding" />
             </div>
 
             <div className="card_bottom">
@@ -52,11 +52,11 @@ const ModalcardComponent = ({ imgpath }) => {
                 </div>
 
                 <div className="description">
-                    <p>“Lorem ipsum dolor sit amet, cons ectetu rad ipiscing elit”</p>
+                    <p>{content.description}</p>
                 </div>
 
                 <div className="tags">
-                    <span>#tag</span>
+                    <span>{content.tags}</span>
                 </div>
             </div>
         </div>

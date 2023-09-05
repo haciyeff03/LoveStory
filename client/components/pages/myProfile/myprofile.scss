@@ -1,3 +1,7 @@
+body {
+    position: relative !important;
+}
+
 .profile_page {
     background-color: #F1F0ED;
     min-height: 100vh;
@@ -366,11 +370,12 @@
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: normal;
-                                    
+
                                     @media (max-width:530px) {
                                         font-size: 15px;
                                         padding: 9px 27px;
                                     }
+
                                     @media (max-width:470px) {
                                         font-size: 13px;
                                         padding: 8px 20px;
@@ -533,7 +538,7 @@
     }
 
     .profil_page_card {
-        margin-top: 85px;
+        margin-top: 65px;
 
         @media (max-width:550px) {
             margin-top: 50px;
@@ -572,6 +577,74 @@
                 }
             }
         }
+
+        .long_underline {
+            margin-bottom: 13px;
+
+            svg {
+                width: 100%;
+            }
+        }
+
+        .profile_card_filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            gap: 10px;
+            overflow: hidden;
+
+            .filter_option {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 10px;
+                width: calc(33.33%);
+
+                img {
+                    width: 32px;
+                    height: 32px;
+
+                    @media (max-width:991px) {
+                        width: 26px;
+                        height: 26px;
+                    }
+
+                    @media (max-width:768px) {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    @media (max-width:420px) {
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+
+                span {
+                    color: #000;
+                    font-family: Nunito;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+
+                    @media (max-width:991px) {
+                        font-size: 26px;
+                    }
+
+                    @media (max-width:768px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width:420px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
     }
 }
 

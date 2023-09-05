@@ -6,7 +6,15 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginStore } from '../../../store/store';
 import { useSnapshot } from 'valtio';
+import Cookies from 'js-cookie';
+
 const Login = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (Cookies.get('user')) {
+      return navigate('/')
+    }
+  }, [])
 
   const [hidden, setHidden] = useState(true);
   const [validation, setValidation] = useState({
@@ -15,7 +23,6 @@ const Login = () => {
   });
 
   const snap = useSnapshot(loginStore);
-  const navigate = useNavigate();
   const [error, setError] = useState(false);
   const [click, setClick] = useState(false);
   const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -58,12 +65,28 @@ const Login = () => {
   }, [snap])
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setClick(true)
 
     if (!error) {
-      navigate('/')
+      try {
+        const res = await fetch('/users.json');
+        const data = await res.json();
+        console.log(data)
+        const loggingUser = data.find((el) => el.email === snap.email);
+        if (!loggingUser) return alert("İstifadeci tapilmadi");
+
+        if (loggingUser.password === snap.password) {
+          Cookies.set('user', snap.email, { expires: 7 });
+          navigate('/')
+        } else {
+          return alert("Email ve ya sifre yanlisdir");
+        }
+
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 
