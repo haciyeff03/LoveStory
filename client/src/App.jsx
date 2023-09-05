@@ -15,9 +15,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.js';
 import UploadImage from "../components/pages/UploadImage/UploadImage";
 import SharePost from "../components/pages/SharePost/SharePost";
 import ForgetPassword from "../components/pages/ForgetPassword/forgetpw";
-
+import MyProfile from "../components/pages/myProfile/MyProfile";
 const App = () => {
-  const pathnameArr = ['/', '/login', '/signup', '/profile', '/profile/edit', '/loading', '/signup/2', '/upload-image', '/share-post', '/forget-password'];
+  const pathnameArr = ['/', '/login', '/signup', '/profile', '/profile/edit','/myprofile', '/loading', '/signup/2', '/upload-image', '/share-post', '/forget-password'];
   const location = useLocation();
 
 
@@ -35,6 +35,7 @@ const App = () => {
             location.pathname === '/upload-image' ||
             location.pathname === '/profile/edit' ||
             location.pathname === '/share-post' ||
+            location.pathname === '/myprofile' ||
             location.pathname === '/forget-password' ? (
             <Routes>
               <Route element={<Login />} path="/login" />
@@ -42,6 +43,7 @@ const App = () => {
               <Route element={<Loading />} path="/loading" />
               <Route element={<Signup2 />} path="/signup/2" />
               <Route element={<Profile />} path="/profile" />
+              <Route element={<MyProfile />} path="/myprofile" />
               <Route element={<EditProfile />} path="/profile/edit" />
               <Route element={<UploadImage />} path="/upload-image" />
               <Route element={<SharePost />} path="/share-post" />
