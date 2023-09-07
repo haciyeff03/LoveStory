@@ -32,7 +32,9 @@ const SharePost = () => {
                             <div className="photo_wrapper">
                                 {
                                     snap.images.map((el, idx) => (
-                                        <div className="photo" key={idx} onClick={() => setImg(el.url)}>
+                                        <div className="photo" key={idx} onClick={() => setImg(el.url)}
+                                            style={{borderWidth: el.url === img ? '3px' : '' }}
+                                        >
                                             <img src={el.url} alt="" />
                                         </div>
                                     ))
@@ -46,8 +48,8 @@ const SharePost = () => {
                             <form onSubmit={handleSubmit}>
                                 <div className="description">
                                     <h3>Şəkilin təsviri</h3>
-                                    <h6>(min.100 söz daxil edin)</h6>
-                                    <textarea name="description" cols="30" rows="6" placeholder='asimazizov5@gmail.com' onChange={(e) => { sharePostStore.description = e.target.value; console.log(e.target.value) }}></textarea>
+                                    <h6>(min.100 simvol daxil edin)</h6>
+                                    <textarea required name="description" cols="30" maxLength={300} rows="6" placeholder='asimazizov5@gmail.com' onChange={(e) => { sharePostStore.description = e.target.value; console.log(e.target.value) }}></textarea>
                                 </div>
 
                                 <div className="post_tag">

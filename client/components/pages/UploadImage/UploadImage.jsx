@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { sharePostStore } from '../../../store/store';
 import { useNavigate } from 'react-router-dom';
 import { useSnapshot } from 'valtio';
+import { motion } from 'framer-motion'
 
 const UploadImage = () => {
     const fileInput = useRef(null);
@@ -145,7 +146,15 @@ const UploadImage = () => {
                                                     </div>
                                                 </div>
                                                 <div className="progress_bar">
-                                                    <div className="inner"></div>
+                                                    <motion.div
+                                                        className="inner"
+                                                        initial={{width: '0px'}}
+                                                        animate={{width: '100%'}}
+                                                        transition={{
+                                                            delay: 0.3,
+                                                            duration: 0.5
+                                                        }}
+                                                    ></motion.div>
                                                 </div>
                                                 <div className="close_btn" onClick={() => deleteImage(index)}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
