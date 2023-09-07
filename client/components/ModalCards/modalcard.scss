@@ -2,21 +2,24 @@
 
 
 .mobile_modal {
-    display: none;
+    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-    width: 90%;
-   
+    width: 80%;
+    @media (max-width: 475px) {
+        width: 95%;
+    }
+
     .card_component {
         border-radius: 30px;
         border: 2px solid #000;
         background-color: #F3EFE0;
         padding: 18px 20px 25px 20px;
         width: 100%;
-        
+
         .card_top {
             display: flex;
             justify-content: space-between;
@@ -94,6 +97,22 @@
             overflow: hidden;
             margin-top: 11px;
             height: 300px;
+            position: relative;
+
+            .slide_fraction {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                z-index: 150;
+                padding: 5px 12px;
+                border-radius: 20px;
+                background-color: #22222293;
+                color: #FFF;
+                backdrop-filter: blur(1px);
+                @media (max-width: 475px) {
+                    font-size: 12px;
+                }
+            }
 
             img {
                 width: 100%;
@@ -155,13 +174,5 @@
             }
         }
 
-    }
-}
-
-
-
-.open_mobile_modal {
-    @media (max-width: 768px) {
-        display: block !important;
     }
 }

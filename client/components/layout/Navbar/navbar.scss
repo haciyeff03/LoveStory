@@ -49,6 +49,20 @@ header {
                 padding: 18px 32px;
             }
 
+            .profile_icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+            }
+
+            .profile_link {
+                padding: 0;
+            }
+
             .signin {
                 border-radius: 50px;
                 border: 1px solid #222;

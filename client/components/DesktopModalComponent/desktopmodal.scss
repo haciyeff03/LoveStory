@@ -1,0 +1,173 @@
+.card_modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    background: #F3EFE0;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    z-index: 1000;
+
+    .modal_left {
+        width: 61%;
+        border-radius: 25px;
+        border: 1px solid #434242;
+        overflow: hidden;
+        user-select: none;
+        position: relative;
+
+        .slide_fraction {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 150;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background-color: #22222293;
+            color: #FFF;
+            backdrop-filter: blur(1px);
+        }
+
+        img {
+            width: 100%;
+            height: 100% !important;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+    }
+
+    .modal_right {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        .right_top {
+            .modal_profile {
+                display: flex;
+                align-items: flex-end;
+                gap: 9px;
+                margin-bottom: 20px;
+
+                .mp_photo {
+                    width: 37.5px;
+                    height: 37.5px;
+                    border-radius: 15px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .mp_info {
+                    .mp_name {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+
+                        span {
+                            color: #222;
+                            font-family: Nunito;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin: 0;
+                        }
+                    }
+
+                    .mp_location {
+                        color: #434242;
+                        font-family: Nunito;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+
+            .price {
+                color: #000;
+                font-family: Nunito;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+
+            .description {
+                p {
+                    color: #434242;
+                    font-family: Nunito;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: 0;
+                }
+            }
+
+            .tag {
+                span {
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .right_bottom {
+            .likes {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                span {
+                    margin: 0;
+                    color: #222;
+                    font-family: Nunito;
+                    font-size: 14.59px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+}
+
+.modal_overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #22222295;
+}

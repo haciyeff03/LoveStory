@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 import { useState } from 'react';
+import Cookies from 'js-cookie';
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
@@ -14,12 +15,27 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="actions">
-            <Link className='signin' to='/login'>
-              Giriş
-            </Link>
-            <Link className='signup' to='/signup'>
-              Qeydiyyat
-            </Link>
+            {
+              Cookies.get('user') ? (
+                <Link to={'/myprofile'} className='profile_link'>
+                  <div className='profile_icon'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                      <path d="M1 19C1 19.9693 1.11783 20.618 1.34327 21.0791C1.5502 21.5023 1.88679 21.8473 2.51687 22.1337C3.17962 22.4349 4.14546 22.6599 5.5602 22.8028C6.96536 22.9448 8.74527 23 11 23C13.2547 23 15.0346 22.9448 16.4398 22.8028C17.8545 22.6599 18.8204 22.4349 19.4831 22.1337C20.1132 21.8473 20.4498 21.5023 20.6567 21.0791C20.8822 20.618 21 19.9693 21 19C21 18.0307 20.8822 17.382 20.6567 16.9209C20.4498 16.4977 20.1132 16.1527 19.4831 15.8663C18.8204 15.5651 17.8545 15.3401 16.4398 15.1972C15.0346 15.0552 13.2547 15 11 15C8.74527 15 6.96536 15.0552 5.5602 15.1972C4.14546 15.3401 3.17962 15.5651 2.51687 15.8663C1.88679 16.1527 1.5502 16.4977 1.34327 16.9209C1.11783 17.382 1 18.0307 1 19Z" stroke="white" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" />
+                      <circle cx="6" cy="6" r="5" transform="matrix(-1 0 0 1 17 0)" stroke="white" strokeWidth="2" />
+                    </svg>
+                  </div>
+                </Link>
+              ) : (
+                <>
+                  <Link className='signin' to='/login'>
+                    Giriş
+                  </Link>
+                  <Link className='signup' to='/signup'>
+                    Qeydiyyat
+                  </Link>
+                </>
+              )
+            }
           </div>
 
           <div className="burger_menu" onClick={() => setToggleMenu(true)}>
@@ -35,7 +51,7 @@ const Navbar = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab</p>
           <Link to='/'>Fotoqraf olaraq daxil ol</Link>
         </div>
-      </div>
+      </div >
 
       <div className="mobile_menu" style={{ transform: toggleMenu ? 'translateY(0)' : 'translateY(-101%)' }}>
         <div className="container">

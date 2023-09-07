@@ -96,8 +96,8 @@ const UploadImage = () => {
     }
 
     let dropzoneBorder = isDragOver ?
-        `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23333' stroke-width='3' stroke-dasharray='0' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e")` :
-        `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23333' stroke-width='3' stroke-dasharray='20' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e")`
+        `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23333' strokeWidth='3' stroke-dasharray='0' stroke-dashoffset='6' strokeLinecap='square'/%3e%3c/svg%3e")` :
+        `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23333' strokeWidth='3' stroke-dasharray='20' stroke-dashoffset='6' strokeLinecap='square'/%3e%3c/svg%3e")`
     return (
         <div className='image_upload_page'>
             <div className="container">

@@ -17,21 +17,21 @@ import SharePost from "../components/pages/SharePost/SharePost";
 import ForgetPassword from "../components/pages/ForgetPassword/forgetpw";
 import MyProfile from "../components/pages/myProfile/MyProfile";
 const App = () => {
-  const pathnameArr = ['/', '/login', '/signup', '/profile', '/profile/edit','/myprofile', '/loading', '/signup/2', '/upload-image', '/share-post', '/forget-password'];
+  const pathnameArr = ['/', '/login', '/signup', '/profile/2', '/profile/edit', '/myprofile', '/loading', '/signup/2', '/upload-image', '/share-post', '/forget-password'];
   const location = useLocation();
 
 
   return (
     <>
       <ScrollToTop />
-      {
+      {/* {
         pathnameArr.includes(location.pathname) ? (
           location.pathname === "/login" ||
             location.pathname === "/signup" ||
             location.pathname === "/signup/2" ||
             location.pathname === '/error' ||
             location.pathname === '/loading' ||
-            location.pathname === '/profile' ||
+            location.pathname === '/profile/2' ||
             location.pathname === '/upload-image' ||
             location.pathname === '/profile/edit' ||
             location.pathname === '/share-post' ||
@@ -42,7 +42,7 @@ const App = () => {
               <Route element={<Signup />} path="/signup" />
               <Route element={<Loading />} path="/loading" />
               <Route element={<Signup2 />} path="/signup/2" />
-              <Route element={<Profile />} path="/profile" />
+              <Route element={<Profile />} path="/profile/:id" />
               <Route element={<MyProfile />} path="/myprofile" />
               <Route element={<EditProfile />} path="/profile/edit" />
               <Route element={<UploadImage />} path="/upload-image" />
@@ -58,7 +58,33 @@ const App = () => {
             </Layout>
           )
         ) : (<Error />)
+      } */}
+
+      {
+        location.pathname === '/' ? (
+          <Layout>
+            <Routes>
+              <Route element={<Home />} path="/" />
+            </Routes>
+          </Layout>
+        ) : (
+          <Routes>
+            <Route element={<Login />} path="/login" />
+            <Route element={<Signup />} path="/signup" />
+            <Route element={<Loading />} path="/loading" />
+            <Route element={<Signup2 />} path="/signup/2" />
+            <Route element={<Profile />} path="/profile/:id" />
+            <Route element={<MyProfile />} path="/myprofile" />
+            <Route element={<EditProfile />} path="/profile/edit" />
+            <Route element={<UploadImage />} path="/upload-image" />
+            <Route element={<SharePost />} path="/share-post" />
+            <Route element={<ForgetPassword />} path="/forget-password" />
+            <Route element={<Error />} path="*" />
+          </Routes>
+        )
       }
+
+
 
     </>
   );
