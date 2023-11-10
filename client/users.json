@@ -1,0 +1,377 @@
+[
+    {
+        "id": 1,
+        "firstname": "John",
+        "lastname": "Doe",
+        "email": "john@gmail.com",
+        "password": "john123",
+        "position": "fotoqraf",
+        "experience": "1-3 il",
+        "tel": "55 123 45 67",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at convallis tortor. Donec vel tellus euismod, vehicula odio vitae, bibendum felis.",
+        "imageUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "posts": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?water,beach"
+                ],
+                "description": "A beautiful beach with clear blue water.",
+                "tags": "#beach #water #vacation #wedding"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?water,beach",
+                    "https://source.unsplash.com/random/?forest",
+                    "https://source.unsplash.com/random/?mountain,sunset"
+                ],
+                "description": "A beautiful beach with clear blue water.",
+                "tags": "#beach #water #vacation #wedding"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife",
+                    "https://source.unsplash.com/random/?jungle"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?water,beach",
+                    "https://source.unsplash.com/random/?forest",
+                    "https://source.unsplash.com/random/?mountain,sunset"
+                ],
+                "description": "A beautiful beach with clear blue water.",
+                "tags": "#beach #water #vacation #wedding"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife",
+                    "https://source.unsplash.com/random/?jungle"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            }
+        ],
+        "saved": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?portrait",
+                    "https://source.unsplash.com/random/?people",
+                    "https://source.unsplash.com/random/?face"
+                ],
+                "description": "Beautiful portraits of people.",
+                "tags": "#portret #portrait #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?portrait",
+                    "https://source.unsplash.com/random/?people",
+                    "https://source.unsplash.com/random/?face"
+                ],
+                "description": "Beautiful portraits of people.",
+                "tags": "#portret #portrait #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?portrait",
+                    "https://source.unsplash.com/random/?people",
+                    "https://source.unsplash.com/random/?face"
+                ],
+                "description": "Beautiful portraits of people.",
+                "tags": "#portret #portrait #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            }
+        ],
+        "mentioned": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife",
+                    "https://source.unsplash.com/random/?jungle"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife",
+                    "https://source.unsplash.com/random/?jungle"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?city",
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?street,lights"
+                ],
+                "description": "A vibrant cityscape with modern architecture.",
+                "tags": "#city #architecture #urban #lovestory"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?animals",
+                    "https://source.unsplash.com/random/?wildlife",
+                    "https://source.unsplash.com/random/?jungle"
+                ],
+                "description": "Wildlife in their natural habitat.",
+                "tags": "#wildlife #nature #animals #family"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?cake,birthday",
+                    "https://source.unsplash.com/random/?party,balloons",
+                    "https://source.unsplash.com/random/?candles,birthday"
+                ],
+                "description": "Birthday celebration with a delicious cake.",
+                "tags": "#birthday #celebration #family"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "firstname": "Alice",
+        "lastname": "Smith",
+        "email": "alice.smith@example.com",
+        "password": "securepass123",
+        "position": "videoqraf",
+        "experience": "3 ildən çox",
+        "tel": "123-456-7890",
+        "description": "Passionate about design and creativity. Experienced in branding and digital graphics.",
+        "imageUrl": "https://source.unsplash.com/random/?portrait",
+        "posts": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?art",
+                    "https://source.unsplash.com/random/?painting",
+                    "https://source.unsplash.com/random/?creative"
+                ],
+                "description": "Exploring the world of art and painting.",
+                "tags": "#art #painting #creativity"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?architecture",
+                    "https://source.unsplash.com/random/?design",
+                    "https://source.unsplash.com/random/?interior"
+                ],
+                "description": "Capturing beautiful architectural designs.",
+                "tags": "#architecture #design #interiors"
+            }
+        ],
+        "saved": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?nature",
+                    "https://source.unsplash.com/random/?outdoors",
+                    "https://source.unsplash.com/random/?adventure"
+                ],
+                "description": "Adventures in the great outdoors.",
+                "tags": "#nature #outdoors #adventure"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?food",
+                    "https://source.unsplash.com/random/?cooking",
+                    "https://source.unsplash.com/random/?delicious"
+                ],
+                "description": "Exploring the world of culinary delights.",
+                "tags": "#food #cooking #delicious"
+            }
+        ],
+        "mentioned": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?portrait",
+                    "https://source.unsplash.com/random/?people",
+                    "https://source.unsplash.com/random/?face"
+                ],
+                "description": "Capturing the essence of people's personalities.",
+                "tags": "#portraits #people #faces"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?travel",
+                    "https://source.unsplash.com/random/?wanderlust",
+                    "https://source.unsplash.com/random/?explore"
+                ],
+                "description": "Wanderlust and travel adventures.",
+                "tags": "#travel #wanderlust #explore"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "firstname": "Emma",
+        "lastname": "Johnson",
+        "email": "emma.johnson@example.com",
+        "password": "mysecret123",
+        "position": "fotoqraf",
+        "experience": "0-6 ay",
+        "tel": "555-789-1234",
+        "description": "Passionate about coding and building innovative software solutions.",
+        "imageUrl": "https://source.unsplash.com/random/?developer",
+        "posts": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?coding",
+                    "https://source.unsplash.com/random/?programming",
+                    "https://source.unsplash.com/random/?tech"
+                ],
+                "description": "Coding and programming adventures.",
+                "tags": "#coding #programming #tech"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?teamwork",
+                    "https://source.unsplash.com/random/?office",
+                    "https://source.unsplash.com/random/?collaboration"
+                ],
+                "description": "Collaborating with amazing teams on software projects.",
+                "tags": "#teamwork #office #collaboration"
+            }
+        ],
+        "saved": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?mountains",
+                    "https://source.unsplash.com/random/?hiking",
+                    "https://source.unsplash.com/random/?adventure"
+                ],
+                "description": "Exploring the great outdoors and going on adventures.",
+                "tags": "#mountains #hiking #adventure"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?music",
+                    "https://source.unsplash.com/random/?concert",
+                    "https://source.unsplash.com/random/?guitar"
+                ],
+                "description": "Enjoying live music and playing the guitar.",
+                "tags": "#music #concert #guitar"
+            }
+        ],
+        "mentioned": [
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?portrait",
+                    "https://source.unsplash.com/random/?people",
+                    "https://source.unsplash.com/random/?face"
+                ],
+                "description": "Capturing beautiful portraits of people.",
+                "tags": "#portraits #people #faces"
+            },
+            {
+                "images": [
+                    "https://source.unsplash.com/random/?travel",
+                    "https://source.unsplash.com/random/?wanderlust",
+                    "https://source.unsplash.com/random/?explore"
+                ],
+                "description": "Wanderlust and travel adventures.",
+                "tags": "#travel #wanderlust #explore"
+            }
+        ]
+    }
+]
