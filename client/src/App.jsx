@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout.jsx";
 import ScrollToTop from "../components/ScrollToTop";
 import Error from "../components/pages/Error/Error";
 import Loading from "../components/pages/Loading/Loading";
